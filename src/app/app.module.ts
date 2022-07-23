@@ -9,6 +9,7 @@ import { FooterComponent } from './homePage/footer/footer.component';
 import { ContentComponent } from './homePage/content/content.component';
 import { FilterComponent } from './homePage/filter/filter.component';
 import { ProductsComponent } from './homePage/products/products.component';
+import { ProductComponent } from './homePage/product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,11 @@ import { ProductsComponent } from './homePage/products/products.component';
     FooterComponent,
     ContentComponent,
     FilterComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
