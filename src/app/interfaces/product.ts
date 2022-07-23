@@ -5,4 +5,5 @@ export interface Product {
   brand: string;
   color: string;
   releaseYear: number;
+  photo: string;
 }

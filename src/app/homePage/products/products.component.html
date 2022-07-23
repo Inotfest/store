@@ -1,1 +1,17 @@
-<p>products works!</p>
+<div class="products">
+  <div class="product" *ngFor="let product of products">
+    <div class="product__wrapper">
+      <div class="product__image">
+        <img
+          class="product__img"
+          src="{{ product.photo }}"
+          alt="{{ product.name }}"
+        />
+      </div>
+      <div class="product__description">
+        <p>{{ product.name }}</p>
+        <p>{{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+</div>
