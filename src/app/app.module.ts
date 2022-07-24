@@ -10,6 +10,7 @@ import { FilterComponent } from './homePage/filter/filter.component';
 import { ProductsComponent } from './homePage/products/products.component';
 import { MainComponent } from './homePage/main/main.component';
 import { PaginationComponent } from './homePage/pagination/pagination.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { PaginationComponent } from './homePage/pagination/pagination.component'
     MainComponent,
     PaginationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
