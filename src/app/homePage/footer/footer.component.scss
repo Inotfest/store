@@ -1,10 +1,13 @@
 .footer {
-  display: flex;
-  justify-content: center;
   background-color: #131921;
-  padding: 1rem;
-  color: #999999;
-  font-size: 1rem;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: #999999;
+    font-size: 1rem;
+  }
 
   &__block {
     padding: 1rem 5rem;

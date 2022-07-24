@@ -9,6 +9,7 @@ import { FooterComponent } from './homePage/footer/footer.component';
 import { FilterComponent } from './homePage/filter/filter.component';
 import { ProductsComponent } from './homePage/products/products.component';
 import { MainComponent } from './homePage/main/main.component';
+import { PaginationComponent } from './homePage/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MainComponent } from './homePage/main/main.component';
     FilterComponent,
     ProductsComponent,
     MainComponent,
+    PaginationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
