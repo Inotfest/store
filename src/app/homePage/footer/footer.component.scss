@@ -1,4 +1,6 @@
 .footer {
+  display: flex;
+  flex-grow: 0;
   background-color: #131921;
 
   &__box {

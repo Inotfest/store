@@ -1,8 +1,11 @@
 .header {
+  display: flex;
+  flex-grow: 0;
   background-color: #232f3e;
 
   &__box {
     display: flex;
+    width: 100%;
     color: white;
     font-size: 1.8rem;
     padding: 1rem 0rem;
