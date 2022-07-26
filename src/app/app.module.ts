@@ -11,6 +11,7 @@ import { ProductsComponent } from './homePage/products/products.component';
 import { MainComponent } from './homePage/main/main.component';
 import { PaginationComponent } from './homePage/pagination/pagination.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     PaginationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

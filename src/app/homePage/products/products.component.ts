@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/interfaces/product';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -8,11 +7,9 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  products: Product[] = [];
-
   constructor(public http: HttpService) {}
 
   ngOnInit(): void {
-    this.http.getData().subscribe((res) => (this.products = res));
+    this.http.getData();
   }
 }

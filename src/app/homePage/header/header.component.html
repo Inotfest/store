@@ -5,8 +5,8 @@
     </div>
     <div class="search-wrapper">
       <div class="search">
-        <input class="search__input" type="text" />
-        <button class="search__button">Search</button>
+        <input class="search__input" type="text" [(ngModel)]="inputSearch" />
+        <button class="search__button" (click)="onSearch()">Search</button>
       </div>
     </div>
     <nav class="nav">
