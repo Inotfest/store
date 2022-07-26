@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   padding: 1rem 0rem;
 }
@@ -12,5 +12,6 @@
 .products {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 80%;
 }
