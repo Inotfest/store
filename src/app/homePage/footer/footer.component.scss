@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-grow: 0;
+  background-color: #131921;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: #999999;
+    font-size: 1rem;
+  }
+
+  &__block {
+    padding: 1rem 5rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+  }
+}

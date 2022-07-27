@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Samsung Galaxy M32 6/128GB Light Blue",
+      "price": 300,
+      "brand": "samsung",
+      "color": "blue",
+      "releaseYear": 2022,
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Apple iPhone 11 128GB White Slim Box",
+      "price": 500,
+      "brand": "apple",
+      "color": "white",
+      "releaseYear": 2022,
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi Redmi Note 11 4/128GB Graphite Gray",
+      "price": 150,
+      "brand": "xiaomi",
+      "color": "gray",
+      "releaseYear": 2021,
+      "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Motorola Moto G60 6/128GB Haze Gray",
+      "price": 200,
+      "brand": "motorola",
+      "color": "gray",
+      "releaseYear": 2021,
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Nokia G11 3/32 Chacoal",
+      "price": 100,
+      "brand": "nokia",
+      "color": "chocoal",
+      "releaseYear": 2021,
+      "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Apple iPhone 13 Pro Max 128GB Graphite ",
+      "price": 1000,
+      "brand": "apple",
+      "color": "graphite",
+      "releaseYear": 2021,
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Samsung Galaxy S22 Ultra 12/512GB Phantom Black",
+      "price": 1000,
+      "brand": "samsung",
+      "color": "black",
+      "releaseYear": 2022,
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Xiaomi Redmi 10C 4/128GB Graphite Gray",
+      "price": 150,
+      "brand": "xiaomi",
+      "color": "black",
+      "releaseYear": 2021,
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg"
+    }
+  ]
+}
