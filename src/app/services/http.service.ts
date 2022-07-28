@@ -8,6 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class HttpService {
   products: Product[] = [];
+  brandFilteringArray: string[] = [];
+
+  brandList = ['samsung', 'apple', 'nokia', 'xiaomi'];
+  colorList = [];
 
   constructor(private http: HttpClient) {}
 
@@ -21,5 +25,28 @@ export class HttpService {
     this.http
       .get<Product[]>(`${environment.jsonUrl}?q=${searchText}`)
       .subscribe((res) => (this.products = res));
+  }
+
+  filterDataByBrend(event: any) {
+    if (event.target.checked) {
+      this.brandFilteringArray.push(event.target.value);
+    } else {
+      this.brandFilteringArray = this.brandFilteringArray.filter(
+        (item) => item !== event.target.value
+      );
+    }
+    this.products = [];
+
+    if (this.brandFilteringArray.length) {
+      for (let i of this.brandFilteringArray) {
+        this.http
+          .get(`${environment.jsonUrl}?brand=${i}`)
+          .subscribe((res: any) => {
+            this.products.push(...res);
+          });
+      }
+    } else {
+      this.getData();
+    }
   }
 }

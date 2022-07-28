@@ -1,22 +1,19 @@
 <div class="filter">
   <div class="filter__box">
     <div class="filter__block">
-      <p>Brand</p>
+      <p>Brand:</p>
+      <div *ngFor="let b of http.brandList; let i = index">
+        <input
+          type="checkbox"
+          id="{{ b }}"
+          (change)="onChacngeBrand($event)"
+          value="{{ b }}"
+        />
+        <label for="{{ b }}">{{ b | titlecase }}</label>
+      </div>
     </div>
     <div class="filter__block">
-      <p>Number of cores</p>
-    </div>
-    <div class="filter__block">
-      <p>RAM</p>
-    </div>
-    <div class="filter__block">
-      <p>Memory</p>
-    </div>
-    <div class="filter__block">
-      <p>Color</p>
-    </div>
-    <div class="filter__block">
-      <p>Price</p>
+      <p>Color:</p>
     </div>
   </div>
 </div>
