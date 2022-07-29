@@ -94,3 +94,10 @@ legend {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
