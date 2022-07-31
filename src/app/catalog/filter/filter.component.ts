@@ -11,7 +11,5 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onChacngeBrand(event: any) {
-    this.http.filterDataByBrend(event);
-  }
+  onChacngeBrand(event: any) {}
 }

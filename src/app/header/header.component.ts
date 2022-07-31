@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/services/http.service';
+import { EventService } from '../services/event.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,12 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class HeaderComponent implements OnInit {
   inputSearch = '';
-
-  constructor(private http: HttpService) {}
+  
+  constructor(private event: EventService) {}
 
   ngOnInit(): void {}
 
   onSearch() {
-    this.http.searchInData(this.inputSearch);
+   this.event.eventSearch(this.inputSearch);
   }
 }
