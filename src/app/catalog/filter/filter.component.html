@@ -1,19 +1,40 @@
-<!-- <div class="filter">
+<div class="filter">
   <div class="filter__box">
     <div class="filter__block">
       <p>Brand:</p>
-      <div *ngFor="let b of http.brandList; let i = index">
+      <div *ngFor="let b of brandList">
         <input
           type="checkbox"
-          id="{{ b }}"
-          (change)="onChacngeBrand($event)"
-          value="{{ b }}"
+          [id]="b"
+          (change)="onChangeBrand($event)"
+          [value]="b"
         />
-        <label for="{{ b }}">{{ b | titlecase }}</label>
+        <label [for]="b">{{ b | titlecase }}</label>
       </div>
     </div>
     <div class="filter__block">
       <p>Color:</p>
+      <div *ngFor="let c of colorList">
+        <input
+          type="checkbox"
+          [id]="c"
+          (change)="onChangeColor($event)"
+          [value]="c"
+        />
+        <label [for]="c">{{ c | titlecase }}</label>
+      </div>
+    </div>
+    <div class="filter__block">
+      <p>Diagonal:</p>
+      <div *ngFor="let d of diagonalList">
+        <input
+          type="checkbox"
+          [id]="d"
+          (change)="onChangeDiagonal($event)"
+          [value]="d"
+        />
+        <label [for]="d">{{ d }}</label>
+      </div>
     </div>
   </div>
-</div> -->
+</div>

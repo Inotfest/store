@@ -25,7 +25,9 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   getProduct() {
     this.event.eventProduct$.subscribe((value) =>
-      this.http.getData(value).subscribe((res) => (this.products = res))
+      this.http.getData(value).subscribe((res) => {
+        this.products = res;
+      })
     );
   }
 }

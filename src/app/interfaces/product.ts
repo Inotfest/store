@@ -6,4 +6,5 @@ export interface Product {
   color: string;
   releaseYear: number;
   photo: string;
+  diagonal: number;
 }

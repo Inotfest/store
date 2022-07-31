@@ -7,7 +7,8 @@
       "brand": "samsung",
       "color": "blue",
       "releaseYear": 2022,
-      "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg"
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg",
+      "diagonal": 6.4
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "brand": "apple",
       "color": "white",
       "releaseYear": 2022,
-      "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg"
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg",
+      "diagonal": 6.1
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "brand": "xiaomi",
       "color": "gray",
       "releaseYear": 2021,
-      "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg"
+      "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
+      "diagonal": 4.6
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "brand": "motorola",
       "color": "gray",
       "releaseYear": 2021,
-      "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg"
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
+      "diagonal": 4.2
     },
     {
       "id": 5,
@@ -43,16 +47,18 @@
       "brand": "nokia",
       "color": "chocoal",
       "releaseYear": 2021,
-      "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg"
+      "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg",
+      "diagonal": 4.5
     },
     {
       "id": 6,
-      "name": "Apple iPhone 13 Pro Max 128GB Graphite ",
+      "name": "Apple iPhone 13 Pro Max 128GB Graphite",
       "price": 1000,
       "brand": "apple",
       "color": "graphite",
       "releaseYear": 2021,
-      "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg"
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg",
+      "diagonal": 5.1
     },
     {
       "id": 7,
@@ -61,16 +67,18 @@
       "brand": "samsung",
       "color": "black",
       "releaseYear": 2022,
-      "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg"
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg",
+      "diagonal": 5.6
     },
     {
       "id": 8,
       "name": "Xiaomi Redmi 10C 4/128GB Graphite Gray",
       "price": 150,
       "brand": "xiaomi",
-      "color": "black",
+      "color": "gray",
       "releaseYear": 2021,
-      "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg"
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg",
+      "diagonal": 6.71
     }
   ]
 }
