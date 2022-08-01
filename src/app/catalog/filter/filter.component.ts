@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs';
-import { EventService } from 'src/app/services/event.service';
-import { environment } from 'src/environments/environment';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-filter',
@@ -20,72 +18,19 @@ export class FilterComponent implements OnInit {
   ];
   diagonalList = ['4.1 - 4.5', '4.6 - 5', '5.1 - 5.5', '5.55 - 6', '6 - 10'];
 
-  brandFilteringArray: string[] = [];
-  colorFilteringArray: string[] = [];
-  diagonalFilteringArray: string[] = [];
-
-  constructor(private event: EventService) {}
+  constructor(private filter: FilterService) {}
 
   ngOnInit(): void {}
 
   onChangeBrand(event: Event) {
-    this.sortingValues(event, this.brandFilteringArray);
+    this.filter.filterBrand(event);
   }
 
   onChangeColor(event: Event) {
-    this.sortingValues(event, this.colorFilteringArray);
+    this.filter.filterColor(event);
   }
 
   onChangeDiagonal(event: Event) {
-    this.sortingValues(event, this.diagonalFilteringArray);
-  }
-
-  sortingValues(event: Event, arrayOfElements: string[]) {
-    const eventInput = <HTMLInputElement>event.target;
-    if (eventInput.checked) {
-      arrayOfElements.push(eventInput.value);
-    } else {
-      const index = arrayOfElements.indexOf(eventInput.value);
-      arrayOfElements.splice(index, 1);
-    }
-    this.onSubmit();
-  }
-
-  onSubmit() {
-    const brand: string = arrayToString('brand', this.brandFilteringArray);
-    const color: string = arrayToString('color', this.colorFilteringArray);
-    const diagonal: string = rangeСonnections(
-      'diagonal',
-      this.diagonalFilteringArray
-    );
-
-    const resultSring = brand + color + diagonal;
-    const queryString = `${environment.jsonUrl}?${resultSring}`;
-    console.log(queryString);
-
-    this.event.eventProduct$.next(queryString);
-
-    function arrayToString(key: string, arrayOfValues: string[]) {
-      if (!arrayOfValues.length) {
-        return '';
-      }
-      return arrayOfValues.map((item) => `&${key}=${item}`).join('');
-    }
-
-    function rangeСonnections(key: string, rangeArray: string[]) {
-      if (!rangeArray.length) {
-        return '';
-      }
-
-      return rangeArray
-        .map((item) =>
-          item
-            .split(' ')
-            .join('')
-            .split('-')
-            .reduce((a, b) => `&${key}_gte=${a}&${key}_lte=${b}`)
-        )
-        .join('');
-    }
+    this.filter.filterDialog(event);
   }
 }
