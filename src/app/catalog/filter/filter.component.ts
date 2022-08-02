@@ -17,6 +17,7 @@ export class FilterComponent implements OnInit {
     'black',
   ];
   diagonalList = ['4.1 - 4.5', '4.6 - 5', '5.1 - 5.5', '5.55 - 6', '6 - 10'];
+  ramList = [2, 3, 4, 6, 8, 10, 12, 16, 18, 32];
 
   constructor(private filter: FilterService) {}
 
@@ -32,5 +33,9 @@ export class FilterComponent implements OnInit {
 
   onChangeDiagonal(event: Event) {
     this.filter.filterDialog(event);
+  }
+
+  onChangeRam(event: Event) {
+    this.filter.filterRam(event);
   }
 }

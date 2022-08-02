@@ -36,5 +36,17 @@
         <label [for]="d">{{ d }}</label>
       </div>
     </div>
+    <div class="filter__block">
+      <p>RAM:</p>
+      <div *ngFor="let r of ramList">
+        <input
+          type="checkbox"
+          [id]="r"
+          (change)="onChangeRam($event)"
+          [value]="r"
+        />
+        <label [for]="r">{{ r }}</label>
+      </div>
+    </div>
   </div>
 </div>

@@ -11,6 +11,7 @@ export class FilterService {
   brandFilteringArray: string[] = [];
   colorFilteringArray: string[] = [];
   diagonalFilteringArray: string[] = [];
+  ramFilteringArray: string[] = [];
 
   constructor() {}
 
@@ -28,6 +29,10 @@ export class FilterService {
 
   filterDialog(event: Event) {
     this.sortingValues(event, this.diagonalFilteringArray);
+  }
+
+  filterRam(event: Event) {
+    this.sortingValues(event, this.ramFilteringArray);
   }
 
   sortingValues(event: Event, arrayOfElements: string[]) {
@@ -48,8 +53,9 @@ export class FilterService {
       'diagonal',
       this.diagonalFilteringArray
     );
+    const ram: string = arrayToString('ram', this.ramFilteringArray);
 
-    const resultSring = brand + color + diagonal;
+    const resultSring = brand + color + diagonal + ram;
     const queryString = `${environment.jsonUrl}?${resultSring}`;
 
     this.productsFilter$.next(queryString);

@@ -8,7 +8,8 @@
       "color": "blue",
       "releaseYear": 2022,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg",
-      "diagonal": 6.4
+      "diagonal": 6.4,
+      "ram": 6
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "color": "white",
       "releaseYear": 2022,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg",
-      "diagonal": 6.1
+      "diagonal": 6.1,
+      "ram": 4
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "color": "gray",
       "releaseYear": 2021,
       "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
-      "diagonal": 4.6
+      "diagonal": 4.6,
+      "ram": 6
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "color": "gray",
       "releaseYear": 2021,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
-      "diagonal": 4.2
+      "diagonal": 4.2,
+      "ram": 6
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "color": "chocoal",
       "releaseYear": 2021,
       "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg",
-      "diagonal": 4.5
+      "diagonal": 4.5,
+      "ram": 3
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@
       "color": "graphite",
       "releaseYear": 2021,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg",
-      "diagonal": 5.1
+      "diagonal": 5.1,
+      "ram": 6
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@
       "color": "black",
       "releaseYear": 2022,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg",
-      "diagonal": 5.6
+      "diagonal": 5.6,
+      "ram": 12
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@
       "color": "gray",
       "releaseYear": 2021,
       "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg",
-      "diagonal": 6.71
+      "diagonal": 6.71,
+      "ram": 4
     }
   ]
 }
