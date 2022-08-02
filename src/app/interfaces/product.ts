@@ -4,7 +4,7 @@ export interface Product {
   price: number;
   brand: string;
   color: string;
-  releaseYear: number;
   photo: string;
   diagonal: number;
+  ram: number;
 }

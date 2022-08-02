@@ -6,7 +6,6 @@
       "price": 300,
       "brand": "samsung",
       "color": "blue",
-      "releaseYear": 2022,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg",
       "diagonal": 6.4,
       "ram": 6
@@ -17,7 +16,6 @@
       "price": 500,
       "brand": "apple",
       "color": "white",
-      "releaseYear": 2022,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg",
       "diagonal": 6.1,
       "ram": 4
@@ -28,7 +26,6 @@
       "price": 150,
       "brand": "xiaomi",
       "color": "gray",
-      "releaseYear": 2021,
       "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
       "diagonal": 4.6,
       "ram": 6
@@ -39,7 +36,6 @@
       "price": 200,
       "brand": "motorola",
       "color": "gray",
-      "releaseYear": 2021,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
       "diagonal": 4.2,
       "ram": 6
@@ -50,7 +46,6 @@
       "price": 100,
       "brand": "nokia",
       "color": "chocoal",
-      "releaseYear": 2021,
       "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg",
       "diagonal": 4.5,
       "ram": 3
@@ -61,7 +56,6 @@
       "price": 1000,
       "brand": "apple",
       "color": "graphite",
-      "releaseYear": 2021,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg",
       "diagonal": 5.1,
       "ram": 6
@@ -72,7 +66,6 @@
       "price": 1000,
       "brand": "samsung",
       "color": "black",
-      "releaseYear": 2022,
       "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg",
       "diagonal": 5.6,
       "ram": 12
@@ -83,10 +76,49 @@
       "price": 150,
       "brand": "xiaomi",
       "color": "gray",
-      "releaseYear": 2021,
       "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg",
       "diagonal": 6.71,
       "ram": 4
+    },
+    {
+      "id": 9,
+      "name": "Samsung Galaxy A53 5G 6/128GB White",
+      "price": 350,
+      "brand": "samsung",
+      "color": "white",
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/263970083.jpg",
+      "diagonal": 6.5,
+      "ram": 6
+    },
+    {
+      "id": 10,
+      "name": "Samsung Galaxy Fold3 12/512GB Phantom Silver",
+      "price": 1000,
+      "brand": "samsung",
+      "color": "black",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/201628829.jpg",
+      "diagonal": 6.2,
+      "ram": 12
+    },
+    {
+      "id": 11,
+      "name": "Samsung Galaxy A13 3/32GB Black",
+      "price": 150,
+      "brand": "samsung",
+      "color": "black",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/263911060.jpg",
+      "diagonal": 6.6,
+      "ram": 3
+    },
+    {
+      "id": 12,
+      "name": "Samsung Galaxy S22 Plus 8/128GB Phantom Black",
+      "price": 1000,
+      "brand": "samsung",
+      "color": "black",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/253280149.jpg",
+      "diagonal": 6.6,
+      "ram": 8
     }
   ]
 }

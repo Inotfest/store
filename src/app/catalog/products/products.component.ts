@@ -10,6 +10,9 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit, OnDestroy {
+  page = 1;
+  pageSize = 8;
+
   products: Product[] = [];
   subscription$ = new Subscription();
 

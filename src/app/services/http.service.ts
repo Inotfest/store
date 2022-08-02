@@ -9,6 +9,7 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   getData(queryString: string) {
+    console.log(queryString);
     return this.http.get<Product[]>(queryString);
   }
 }
