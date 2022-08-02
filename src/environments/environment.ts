@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  jsonUrl: 'http://localhost:3000/products',
+  jsonUrl: 'http://localhost:3000/products?_limit=100',
+  jsonSearch: 'http://localhost:3000/products?q=',
 };
 
 /*

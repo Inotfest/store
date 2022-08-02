@@ -16,7 +16,7 @@ export class FilterService {
   constructor() {}
 
   eventSearch(inputData: string) {
-    this.productsFilter$.next(`${environment.jsonUrl}?q=${inputData}`);
+    this.productsFilter$.next(`${environment.jsonSearch}${inputData}`);
   }
 
   filterBrand(event: Event) {
