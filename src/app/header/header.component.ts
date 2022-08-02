@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventService } from '../services/event.service';
+import { FilterService } from '../services/filter.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,12 @@ import { EventService } from '../services/event.service';
 })
 export class HeaderComponent implements OnInit {
   inputSearch = '';
-  
-  constructor(private event: EventService) {}
+
+  constructor(private filter: FilterService) {}
 
   ngOnInit(): void {}
 
   onSearch() {
-   this.event.eventSearch(this.inputSearch);
+    this.filter.eventSearch(this.inputSearch);
   }
 }

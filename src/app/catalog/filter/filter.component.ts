@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/services/http.service';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-filter',
@@ -7,9 +7,35 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
-  constructor(public http: HttpService) {}
+  brandList: string[] = ['nokia', 'apple', 'samsung', 'xiaomi', 'motorola'];
+  colorList: string[] = [
+    'blue',
+    'white',
+    'gray',
+    'chocoal',
+    'graphite',
+    'black',
+  ];
+  diagonalList = ['4.1 - 4.5', '4.6 - 5', '5.1 - 5.5', '5.55 - 6', '6 - 10'];
+  ramList = [2, 3, 4, 6, 8, 10, 12, 16, 18, 32];
+
+  constructor(private filter: FilterService) {}
 
   ngOnInit(): void {}
 
-  onChacngeBrand(event: any) {}
+  onChangeBrand(event: Event) {
+    this.filter.filterBrand(event);
+  }
+
+  onChangeColor(event: Event) {
+    this.filter.filterColor(event);
+  }
+
+  onChangeDiagonal(event: Event) {
+    this.filter.filterDialog(event);
+  }
+
+  onChangeRam(event: Event) {
+    this.filter.filterRam(event);
+  }
 }

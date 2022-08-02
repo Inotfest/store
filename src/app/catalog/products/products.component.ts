@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/interfaces/product';
-import { EventService } from 'src/app/services/event.service';
+import { FilterService } from 'src/app/services/filter.service';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   subscription$ = new Subscription();
 
-  constructor(private event: EventService, private http: HttpService) {}
+  constructor(private filter: FilterService, private http: HttpService) {}
 
   ngOnInit(): void {
     this.subscription$.add(this.getProduct());
@@ -24,8 +24,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
 
   getProduct() {
-    this.event.eventProduct$.subscribe((value) =>
-      this.http.getData(value).subscribe((res) => (this.products = res))
+    this.filter.productsFilter$.subscribe((value) =>
+      this.http.getData(value).subscribe((res) => {
+        this.products = res;
+      })
     );
   }
 }
