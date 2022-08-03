@@ -1,86 +1,55 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { OptionsObjectFilter, valueProduct } from '../interfaces/filter';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FilterService {
-  productsFilter$ = new BehaviorSubject<string>(environment.jsonUrl);
-
-  brandFilteringArray: string[] = [];
-  colorFilteringArray: string[] = [];
-  diagonalFilteringArray: string[] = [];
-  ramFilteringArray: string[] = [];
+  productsFilter$ = new Subject<any>();
+  arrayOfRequestParameters: any[] = [];
 
   constructor() {}
 
-  eventSearch(inputData: string) {
+  eventSearch(inputData: string): void {
     this.productsFilter$.next(`${environment.jsonSearch}${inputData}`);
   }
 
-  filterBrand(event: Event) {
-    this.sortingValues(event, this.brandFilteringArray);
-  }
-
-  filterColor(event: Event) {
-    this.sortingValues(event, this.colorFilteringArray);
-  }
-
-  filterDialog(event: Event) {
-    this.sortingValues(event, this.diagonalFilteringArray);
-  }
-
-  filterRam(event: Event) {
-    this.sortingValues(event, this.ramFilteringArray);
-  }
-
-  sortingValues(event: Event, arrayOfElements: string[]) {
+  filterItems(event: Event, value: valueProduct, type: string): void {
     const eventInput = <HTMLInputElement>event.target;
+    const optionsObject: OptionsObjectFilter = {
+      type,
+      value: value,
+    };
+
     if (eventInput.checked) {
-      arrayOfElements.push(eventInput.value);
+      this.arrayOfRequestParameters.push(optionsObject);
     } else {
-      const index = arrayOfElements.indexOf(eventInput.value);
-      arrayOfElements.splice(index, 1);
+      const index = this.arrayOfRequestParameters.indexOf(optionsObject);
+      this.arrayOfRequestParameters.splice(index, 1);
     }
-    this.requestUrlGeneration();
+
+    this.sendingUrlParameters();
   }
 
-  requestUrlGeneration() {
-    const brand: string = arrayToString('brand', this.brandFilteringArray);
-    const color: string = arrayToString('color', this.colorFilteringArray);
-    const diagonal: string = rangeСonnections(
-      'diagonal',
-      this.diagonalFilteringArray
-    );
-    const ram: string = arrayToString('ram', this.ramFilteringArray);
+  searchFullText(searchText: string) {
+    const optionsObject: OptionsObjectFilter = {
+      type: '',
+      value: searchText,
+    };
 
-    const resultSring = brand + color + diagonal + ram;
-    const queryString = `${environment.jsonUrl}?${resultSring}`;
-
-    this.productsFilter$.next(queryString);
-
-    function arrayToString(key: string, arrayOfValues: string[]) {
-      if (!arrayOfValues.length) {
-        return '';
-      }
-      return arrayOfValues.map((item) => `&${key}=${item}`).join('');
+    if (searchText) {
+      this.arrayOfRequestParameters.push(optionsObject);
+    } else {
+      const index = this.arrayOfRequestParameters.indexOf(optionsObject);
+      this.arrayOfRequestParameters.splice(index, 1);
     }
 
-    function rangeСonnections(key: string, rangeArray: string[]) {
-      if (!rangeArray.length) {
-        return '';
-      }
+    this.sendingUrlParameters();
+  }
 
-      return rangeArray
-        .map((item) =>
-          item
-            .split(' ')
-            .join('')
-            .split('-')
-            .reduce((a, b) => `&${key}_gte=${a}&${key}_lte=${b}`)
-        )
-        .join('');
-    }
+  sendingUrlParameters() {
+    this.productsFilter$.next(this.arrayOfRequestParameters);
   }
 }

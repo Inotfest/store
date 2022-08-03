@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { Product } from 'src/app/interfaces/product';
 import { FilterService } from 'src/app/services/filter.service';
 import { HttpService } from 'src/app/services/http.service';
@@ -14,23 +14,34 @@ export class ProductsComponent implements OnInit, OnDestroy {
   pageSize = 8;
 
   products: Product[] = [];
-  subscription$ = new Subscription();
+  private destroy$ = new Subject<boolean>();
 
   constructor(private filter: FilterService, private http: HttpService) {}
 
   ngOnInit(): void {
-    this.subscription$.add(this.getProduct());
-  }
-
-  ngOnDestroy(): void {
-    this.subscription$.unsubscribe();
+    this.http
+      .getData()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((res) => (this.products = res));
+    this.getProduct();
   }
 
   getProduct() {
-    this.filter.productsFilter$.subscribe((value) =>
-      this.http.getData(value).subscribe((res) => {
-        this.products = res;
-      })
-    );
+    this.filter.productsFilter$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((value) =>
+        this.http
+          .getData(value)
+          .pipe(takeUntil(this.destroy$))
+          .subscribe((res) => {
+            this.page = 1;
+            this.products = res;
+          })
+      );
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }

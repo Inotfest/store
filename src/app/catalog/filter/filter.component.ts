@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterService } from 'src/app/services/filter.service';
+import { catalog } from 'src/app/constants/catalog';
+import { SelectObject } from 'src/app/interfaces/filter';
 
 @Component({
   selector: 'app-filter',
@@ -7,35 +8,12 @@ import { FilterService } from 'src/app/services/filter.service';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
-  brandList: string[] = ['nokia', 'apple', 'samsung', 'xiaomi', 'motorola'];
-  colorList: string[] = [
-    'blue',
-    'white',
-    'gray',
-    'chocoal',
-    'graphite',
-    'black',
-  ];
-  diagonalList = ['4.1 - 4.5', '4.6 - 5', '5.1 - 5.5', '5.55 - 6', '6 - 10'];
-  ramList = [2, 3, 4, 6, 8, 10, 12];
+  brandList: SelectObject[] = catalog.brand;
+  colorList: SelectObject[] = catalog.color;
+  diagonalList: SelectObject[] = catalog.diagonal;
+  ramList: SelectObject[] = catalog.ram;
 
-  constructor(private filter: FilterService) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  onChangeBrand(event: Event) {
-    this.filter.filterBrand(event);
-  }
-
-  onChangeColor(event: Event) {
-    this.filter.filterColor(event);
-  }
-
-  onChangeDiagonal(event: Event) {
-    this.filter.filterDialog(event);
-  }
-
-  onChangeRam(event: Event) {
-    this.filter.filterRam(event);
-  }
 }
