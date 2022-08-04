@@ -1,6 +1,6 @@
 import { SelectOptions } from '../interfaces/filter';
 
-export const catalog: SelectOptions = {
+export const Catalog: SelectOptions = {
   brand: [
     { value: 'nokia', title: 'Nokia', type: 'brand' },
     { value: 'apple', title: 'Apple', type: 'brand' },
