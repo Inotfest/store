@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from '../interfaces/product';
 import { environment } from 'src/environments/environment';
 import { OptionsObjectFilter } from '../interfaces/filter';
+import { FilterType } from '../constants/Catalog';
 
 @Injectable({
   providedIn: 'root',
@@ -10,22 +11,27 @@ import { OptionsObjectFilter } from '../interfaces/filter';
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  getData(queryString?: OptionsObjectFilter[]) {
+  public getData(queryString?: OptionsObjectFilter[]) {
     let url = environment.jsonUrl;
     if (queryString) {
       let str = '';
       for (let item of queryString) {
-        if (!item.type && item.value) {
-          str += `&q=${item.value}`;
-        } else if (typeof item.value === 'object') {
-          str += `&${item.type}_gte=${item.value.minValue}&${item.type}_lte=${item.value.maxValue}`;
-        } else {
-          str += `&${item.type}=${item.value}`;
+        switch (item.category) {
+          case FilterType.SEARCH:
+            str += `&q=${item.value}`;
+            break;
+          case FilterType.CATEGORY:
+            str += `&${item.type}=${item.value}`;
+            break;
+          case FilterType.CATEGORY_RANGE:
+            str += `&${item.type}_gte=${item.value.minValue}&${item.type}_lte=${item.value.maxValue}`;
+            break;
+          default:
+            str = '';
         }
       }
       url += str;
     }
-
     return this.http.get<Product[]>(url);
   }
 }

@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSearch() {
+  public onSearch() {
     this.filter.searchFullText(this.inputSearch);
   }
 }

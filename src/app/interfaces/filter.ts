@@ -2,26 +2,21 @@ export type valueProduct = string | number | ValueObjectParameters;
 
 export interface OptionsObjectFilter {
   type: string;
-  value: valueProduct;
+  value: any;
+  category: string;
 }
 
 export interface SelectOptions {
-  [key: string | symbol]: Array<SelectObject>;
-}
-
-interface ValueObjectParameters {
-  minValue: number;
-  maxValue: number;
+  [key: string]: Array<SelectObject>;
 }
 
 export interface SelectObject {
-  value:
-    | string
-    | number
-    | {
-        minValue: number;
-        maxValue: number;
-      };
+  value: valueProduct;
   title: string;
   type: string;
+}
+
+export interface ValueObjectParameters {
+  maxValue: number;
+  minValue: number;
 }
