@@ -17,4 +17,11 @@
     border-radius: 5px;
     background-color: green;
   }
+
+  &__input-error {
+    border: 2px solid red;
+  }
+  &__text-error {
+    color: red;
+  }
 }

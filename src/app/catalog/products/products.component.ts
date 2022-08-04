@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.getProduct();
   }
 
-  getProduct() {
+  private getProduct() {
     this.filter.productsFilter$
       .pipe(takeUntil(this.destroy$))
       .subscribe((value) =>

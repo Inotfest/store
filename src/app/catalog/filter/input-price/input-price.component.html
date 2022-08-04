@@ -1,10 +1,23 @@
 <div class="price">
   <p class="price__title">Price</p>
   <small>from</small>
-  <input class="price__input" type="number" />
+  <input
+    class="price__input"
+    type="number"
+    [min]="1"
+    [(ngModel)]="fromPrice"
+    [class.price__input-error]="errorPrice"
+  />
   <small>to</small>
-  <input class="price__input" type="number" />
+  <input
+    class="price__input"
+    type="number"
+    [min]="1"
+    [(ngModel)]="toPrice"
+    [class.price__input-error]="errorPrice"
+  />
+  <small class="price__text-error" *ngIf="errorPrice">Price entry error</small>
   <div class="price__button">
-    <button class="price__btn">Ok</button>
+    <button class="price__btn" (click)="onClickNumbers()">Ok</button>
   </div>
 </div>
