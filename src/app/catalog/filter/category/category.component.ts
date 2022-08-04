@@ -3,12 +3,12 @@ import { SelectObject, valueProduct } from 'src/app/interfaces/filter';
 import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
-  selector: 'app-categoty',
-  templateUrl: './categoty.component.html',
-  styleUrls: ['./categoty.component.scss'],
+  selector: 'app-category',
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.scss'],
 })
-export class CategotyComponent implements OnInit {
-  @Input() categoryList!: SelectObject[];
+export class СategoryComponent implements OnInit {
+  @Input() categoryList: SelectObject[];
 
   constructor(private filterService: FilterService) {}
 

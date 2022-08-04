@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ProductComponent } from './catalog/product/product.component';
-import { CategotyComponent } from './catalog/filter/categoty/categoty.component';
+import { СategoryComponent } from './catalog/filter/category/category.component';
 import { InputPriceComponent } from './catalog/filter/input-price/input-price.component';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { InputPriceComponent } from './catalog/filter/input-price/input-price.co
     ProductsComponent,
     CatalogComponent,
     ProductComponent,
-    CategotyComponent,
+    СategoryComponent,
     InputPriceComponent,
   ],
   imports: [

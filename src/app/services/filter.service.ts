@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { OptionsObjectFilter, valueProduct } from '../interfaces/filter';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FilterService {
-  productsFilter$ = new Subject<any>();
-  arrayOfRequestParameters: any[] = [];
+  productsFilter$ = new Subject<OptionsObjectFilter[]>();
+  arrayOfRequestParameters: OptionsObjectFilter[] = [];
 
   constructor() {}
-
-  eventSearch(inputData: string): void {
-    this.productsFilter$.next(`${environment.jsonSearch}${inputData}`);
-  }
 
   filterItems(event: Event, value: valueProduct, type: string): void {
     const eventInput = <HTMLInputElement>event.target;

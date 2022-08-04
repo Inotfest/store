@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { catalog } from 'src/app/constants/catalog';
+import { Catalog } from 'src/app/constants/Catalog';
 import { SelectObject } from 'src/app/interfaces/filter';
 
 @Component({
@@ -8,10 +8,10 @@ import { SelectObject } from 'src/app/interfaces/filter';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
-  brandList: SelectObject[] = catalog.brand;
-  colorList: SelectObject[] = catalog.color;
-  diagonalList: SelectObject[] = catalog.diagonal;
-  ramList: SelectObject[] = catalog.ram;
+  brandList: SelectObject[] = Catalog.brand;
+  colorList: SelectObject[] = Catalog.color;
+  diagonalList: SelectObject[] = Catalog.diagonal;
+  ramList: SelectObject[] = Catalog.ram;
 
   constructor() {}
 
