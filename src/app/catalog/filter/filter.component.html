@@ -1,52 +1,23 @@
 <div class="filter">
   <div class="filter__box">
     <div class="filter__block">
-      <p>Brand:</p>
-      <div *ngFor="let b of brandList">
-        <input
-          type="checkbox"
-          [id]="b"
-          (change)="onChangeBrand($event)"
-          [value]="b"
-        />
-        <label [for]="b">{{ b | titlecase }}</label>
-      </div>
+      <app-input-price></app-input-price>
     </div>
     <div class="filter__block">
-      <p>Color:</p>
-      <div *ngFor="let c of colorList">
-        <input
-          type="checkbox"
-          [id]="c"
-          (change)="onChangeColor($event)"
-          [value]="c"
-        />
-        <label [for]="c">{{ c | titlecase }}</label>
-      </div>
+      <p>Brand</p>
+      <app-categoty [categoryList]="brandList"> </app-categoty>
     </div>
     <div class="filter__block">
-      <p>Diagonal:</p>
-      <div *ngFor="let d of diagonalList">
-        <input
-          type="checkbox"
-          [id]="d"
-          (change)="onChangeDiagonal($event)"
-          [value]="d"
-        />
-        <label [for]="d">{{ d }}</label>
-      </div>
+      <p>Color</p>
+      <app-categoty [categoryList]="colorList"> </app-categoty>
     </div>
     <div class="filter__block">
-      <p>RAM:</p>
-      <div *ngFor="let r of ramList">
-        <input
-          type="checkbox"
-          [id]="r"
-          (change)="onChangeRam($event)"
-          [value]="r"
-        />
-        <label [for]="r">{{ r }}</label>
-      </div>
+      <p>Diagonal</p>
+      <app-categoty [categoryList]="diagonalList"> </app-categoty>
+    </div>
+    <div class="filter__block">
+      <p>RAM</p>
+      <app-categoty [categoryList]="ramList"> </app-categoty>
     </div>
   </div>
 </div>

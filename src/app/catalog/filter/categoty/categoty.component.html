@@ -1,0 +1,11 @@
+<div class="category">
+  <div *ngFor="let category of categoryList">
+    <input
+      type="checkbox"
+      [value]="category.value"
+      [id]="category.title"
+      (change)="onChacngePoints($event, category.value, category.type)"
+    />
+    <label [for]="category.title">{{ category.title }}</label>
+  </div>
+</div>

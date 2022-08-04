@@ -14,6 +14,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   onSearch() {
-    this.filter.eventSearch(this.inputSearch);
+    this.filter.searchFullText(this.inputSearch);
   }
 }

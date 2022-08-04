@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ProductComponent } from './catalog/product/product.component';
+import { CategotyComponent } from './catalog/filter/categoty/categoty.component';
+import { InputPriceComponent } from './catalog/filter/input-price/input-price.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ProductComponent } from './catalog/product/product.component';
     ProductsComponent,
     CatalogComponent,
     ProductComponent,
+    CategotyComponent,
+    InputPriceComponent,
   ],
   imports: [
     BrowserModule,
