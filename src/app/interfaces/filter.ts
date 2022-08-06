@@ -2,7 +2,7 @@ export type valueProduct = string | number | ValueObjectParameters;
 
 export interface OptionsObjectFilter {
   type: string;
-  value: any;
+  value: valueProduct;
   category: string;
 }
 

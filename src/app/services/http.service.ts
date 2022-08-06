@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../interfaces/product';
 import { environment } from 'src/environments/environment';
-import { OptionsObjectFilter } from '../interfaces/filter';
+import {
+  OptionsObjectFilter,
+  ValueObjectParameters,
+} from '../interfaces/filter';
 import { FilterType } from '../constants/Catalog';
 
 @Injectable({
@@ -24,7 +27,9 @@ export class HttpService {
             str += `&${item.type}=${item.value}`;
             break;
           case FilterType.CATEGORY_RANGE:
-            str += `&${item.type}_gte=${item.value.minValue}&${item.type}_lte=${item.value.maxValue}`;
+            str += `&${item.type}_gte=${
+              (<ValueObjectParameters>item.value).minValue
+            }&${item.type}_lte=${(<ValueObjectParameters>item.value).maxValue}`;
             break;
           default:
             str = '';
