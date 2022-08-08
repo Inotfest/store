@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from '../interfaces/product';
 import { LocalStorageService } from '../services/local-storage.service';
+import { Dialog } from '../constants/Dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -9,10 +10,10 @@ import { LocalStorageService } from '../services/local-storage.service';
   styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent implements OnInit {
-  public numberOfproducts = 1;
+  public numberOfproducts = Dialog.MIN_NUMBER_OF_PRODUCTS;
 
-  private maxProducts = 10;
-  private minProducts = 1;
+  private maxProducts = Dialog.MAX_NUMBER_OF_PRODUCTS;
+  private minProducts = Dialog.MIN_NUMBER_OF_PRODUCTS;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Product,

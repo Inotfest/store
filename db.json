@@ -7,6 +7,7 @@
       "brand": "samsung",
       "color": "blue",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/189581909.jpg",
       "diagonal": 6.4,
       "ram": 6
     },
@@ -17,6 +18,7 @@
       "brand": "apple",
       "color": "white",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/37399337.png",
       "diagonal": 6.1,
       "ram": 4
     },
@@ -27,6 +29,7 @@
       "brand": "xiaomi",
       "color": "gray",
       "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
+      "photoBack": "https://content.rozetka.com.ua/goods/images/big/277513823.jpg",
       "diagonal": 4.6,
       "ram": 6
     },
@@ -37,6 +40,7 @@
       "brand": "motorola",
       "color": "gray",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
+      "photoBack": "https://content.rozetka.com.ua/goods/images/big/220713295.jpg",
       "diagonal": 4.2,
       "ram": 6
     },
@@ -47,6 +51,7 @@
       "brand": "nokia",
       "color": "chocoal",
       "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/263848150.jpg",
       "diagonal": 4.5,
       "ram": 3
     },
@@ -57,6 +62,7 @@
       "brand": "apple",
       "color": "graphite",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/221022044.jpg",
       "diagonal": 5.1,
       "ram": 6
     },
@@ -67,6 +73,7 @@
       "brand": "samsung",
       "color": "black",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/253281761.jpg",
       "diagonal": 5.6,
       "ram": 12
     },
@@ -77,6 +84,7 @@
       "brand": "xiaomi",
       "color": "gray",
       "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/265579430.jpg",
       "diagonal": 6.71,
       "ram": 4
     },
@@ -87,6 +95,7 @@
       "brand": "samsung",
       "color": "white",
       "photo": "https://content1.rozetka.com.ua/goods/images/big/263970083.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/263970084.jpg",
       "diagonal": 6.5,
       "ram": 6
     },
@@ -97,6 +106,7 @@
       "brand": "samsung",
       "color": "black",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/201628829.jpg",
+      "photoBack": "https://content.rozetka.com.ua/goods/images/big/201644024.jpg",
       "diagonal": 6.2,
       "ram": 12
     },
@@ -107,6 +117,7 @@
       "brand": "samsung",
       "color": "black",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/263911060.jpg",
+      "photoBack": "https://content.rozetka.com.ua/goods/images/big/263911061.jpg",
       "diagonal": 6.6,
       "ram": 3
     },
@@ -117,6 +128,7 @@
       "brand": "samsung",
       "color": "black",
       "photo": "https://content.rozetka.com.ua/goods/images/big/253280149.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/253280159.jpg",
       "diagonal": 6.6,
       "ram": 8
     }

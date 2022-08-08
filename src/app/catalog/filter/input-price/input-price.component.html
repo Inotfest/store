@@ -18,6 +18,12 @@
   />
   <small class="price__text-error" *ngIf="errorPrice">Price entry error</small>
   <div class="price__button">
-    <button class="price__btn" (click)="onClickNumbers()">Ok</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onClickNumbers()"
+    >
+      Ok
+    </button>
   </div>
 </div>

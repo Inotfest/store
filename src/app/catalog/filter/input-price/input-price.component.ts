@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilterService } from 'src/app/services/filter.service';
+import { InputPrice } from 'src/app/constants/Price';
 
 @Component({
   selector: 'app-input-price',
@@ -7,8 +8,8 @@ import { FilterService } from 'src/app/services/filter.service';
   styleUrls: ['./input-price.component.scss'],
 })
 export class InputPriceComponent implements OnInit {
-  fromPrice = 0;
-  toPrice = 10000;
+  fromPrice = InputPrice.MIN_PRICE;
+  toPrice = InputPrice.MAX_RPICE;
 
   errorPrice = false;
 

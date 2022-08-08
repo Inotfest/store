@@ -1,11 +1,10 @@
 <div class="category">
   <div *ngFor="let category of categoryList">
-    <input
-      type="checkbox"
-      [value]="category.value"
+    <mat-checkbox
       [id]="category.title"
-      (change)="onChacngePoints($event, category.value, category.type)"
-    />
-    <label [for]="category.title">{{ category.title }}</label>
+      color="primary"
+      (change)="onChacngePoints($event.checked, category.value, category.type)"
+      >{{ category.title }}
+    </mat-checkbox>
   </div>
 </div>

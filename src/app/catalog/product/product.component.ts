@@ -11,6 +11,7 @@ import { Product } from 'src/app/interfaces/product';
 export class ProductComponent implements OnInit {
   @Input() product: Product;
 
+  photoBack = false;
 
   constructor(private matDialog: MatDialog) {}
 
@@ -22,5 +23,21 @@ export class ProductComponent implements OnInit {
       width: '50%',
       height: '75%',
     });
+  }
+
+  onMouseEnter() {
+    this.photoBack = true;
+  }
+
+  onMouseLeave() {
+    this.photoBack = false;
+  }
+
+  photo() {
+    if (this.photoBack) {
+      return this.product.photoBack;
+    } else {
+      return this.product.photo;
+    }
   }
 }
