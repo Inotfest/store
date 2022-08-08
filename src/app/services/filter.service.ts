@@ -30,8 +30,9 @@ export class FilterService {
     if (eventInput.checked) {
       this.arrayOfRequestParameters.push(optionsObject);
     } else {
-      const index = this.arrayOfRequestParameters.indexOf(optionsObject);
-      this.arrayOfRequestParameters.splice(index, 1);
+      this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
+        (item) => item.value !== value
+      );
     }
 
     this.sendingUrlParameters();

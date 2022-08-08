@@ -7,7 +7,7 @@ import { FilterService } from 'src/app/services/filter.service';
   styleUrls: ['./input-price.component.scss'],
 })
 export class InputPriceComponent implements OnInit {
-  fromPrice = 1;
+  fromPrice = 0;
   toPrice = 10000;
 
   errorPrice = false;
@@ -17,7 +17,7 @@ export class InputPriceComponent implements OnInit {
   ngOnInit(): void {}
 
   public onClickNumbers() {
-    if (this.fromPrice > this.toPrice) {
+    if (this.fromPrice >= this.toPrice) {
       this.errorPrice = true;
     } else {
       this.errorPrice = false;

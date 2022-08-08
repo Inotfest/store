@@ -14,6 +14,9 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { ProductComponent } from './catalog/product/product.component';
 import { СategoryComponent } from './catalog/filter/category/category.component';
 import { InputPriceComponent } from './catalog/filter/input-price/input-price.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { InputPriceComponent } from './catalog/filter/input-price/input-price.co
     ProductComponent,
     СategoryComponent,
     InputPriceComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,8 @@ import { InputPriceComponent } from './catalog/filter/input-price/input-price.co
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
