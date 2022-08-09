@@ -8,11 +8,16 @@
       <button mat-mini-fab class="dialog__close" (click)="close()">X</button>
     </div>
     <div class="dialog__description">
-      <h2>Сharacteristics:</h2>
+      <h2>Main characteristics:</h2>
       <p class="dialog__p">Brand: {{ data.brand | titlecase }}</p>
       <p class="dialog__p">Color: {{ data.color | titlecase }}</p>
       <p class="dialog__p">Diagonal: {{ data.diagonal }}</p>
       <p class="dialog__p">RAM: {{ data.ram }}</p>
+      <p class="dialog__p">Memory: {{ data.memory }} GB</p>
+      <p class="dialog__p">Battery: {{ data.battery }} mAh</p>
+      <h2>Description:</h2>
+      <p class="dialog__p">{{ data.description }}</p>
+      <p class="dialog__price"><small>$</small>{{ data.price }}</p>
     </div>
     <div class="dialog__buy">
       <div class="dialog__block-buttons">

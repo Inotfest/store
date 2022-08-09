@@ -12,6 +12,8 @@ enum ProductCategory {
   COLOR = 'color',
   DIAGONAL = 'diagonal',
   RAM = 'ram',
+  BATTERY = 'battery',
+  MEMORY = 'memory',
 }
 
 export const Catalog: SelectOptions = {
@@ -39,6 +41,11 @@ export const Catalog: SelectOptions = {
     {
       value: 'motorola',
       title: 'Motorola',
+      type: ProductCategory.BRAND,
+    },
+    {
+      value: 'infinix',
+      title: 'Infinix',
       type: ProductCategory.BRAND,
     },
   ],
@@ -101,12 +108,29 @@ export const Catalog: SelectOptions = {
       type: ProductCategory.DIAGONAL,
     },
   ],
-  ram: [
+  battery: [
     {
-      value: 2,
-      title: '2',
-      type: ProductCategory.RAM,
+      value: { minValue: 3000, maxValue: 3900 },
+      title: '3000 - 3900 mAh',
+      type: ProductCategory.BATTERY,
     },
+    {
+      value: { minValue: 4000, maxValue: 4900 },
+      title: '4000 - 4900 mAh',
+      type: ProductCategory.BATTERY,
+    },
+    {
+      value: { minValue: 5000, maxValue: 5900 },
+      title: '5000 - 5900 mAh',
+      type: ProductCategory.BATTERY,
+    },
+    {
+      value: { minValue: 6000, maxValue: 8900 },
+      title: '6000 - 8900 mAh',
+      type: ProductCategory.BATTERY,
+    },
+  ],
+  ram: [
     {
       value: 3,
       title: '3',
@@ -135,6 +159,33 @@ export const Catalog: SelectOptions = {
     {
       value: 12,
       title: '12',
+      type: ProductCategory.RAM,
+    },
+  ],
+  memory: [
+    {
+      value: 32,
+      title: '32 GB',
+      type: ProductCategory.RAM,
+    },
+    {
+      value: 64,
+      title: '64 GB',
+      type: ProductCategory.RAM,
+    },
+    {
+      value: 128,
+      title: '128 GB',
+      type: ProductCategory.RAM,
+    },
+    {
+      value: 256,
+      title: '256 GB',
+      type: ProductCategory.RAM,
+    },
+    {
+      value: 512,
+      title: '512 GB',
       type: ProductCategory.RAM,
     },
   ],

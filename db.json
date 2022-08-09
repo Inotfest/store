@@ -3,134 +3,198 @@
     {
       "id": 1,
       "name": "Samsung Galaxy M32 6/128GB Light Blue",
-      "price": 300,
+      "price": 245,
       "brand": "samsung",
       "color": "blue",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/189581882.jpg",
       "photoBack": "https://content1.rozetka.com.ua/goods/images/big/189581909.jpg",
       "diagonal": 6.4,
-      "ram": 6
+      "battery": 5000,
+      "ram": 6,
+      "memory": 128,
+      "description": "Screen (6.4\", Super AMOLED, 2400x1080) / MediaTek Helio G80 (2.0 GHz + 1.8 GHz) / main quad camera: 64 MP + 8 MP + 2 MP + 2 MP, front camera: 20 MP / RAM 6 GB / 128 GB of internal memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh"
     },
     {
       "id": 2,
       "name": "Apple iPhone 11 128GB White Slim Box",
-      "price": 500,
+      "price": 677,
       "brand": "apple",
       "color": "white",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/37399329.jpg",
       "photoBack": "https://content1.rozetka.com.ua/goods/images/big/37399337.png",
       "diagonal": 6.1,
-      "ram": 4
+      "battery": 3046,
+      "ram": 4,
+      "memory": 128,
+      "description": "Screen (6.1\", IPS (Liquid Retina HD), 1792x828)/ Apple A13 Bionic/ main dual camera: 12 MP + 12 MP, front camera: 12 MP/ RAM 4 GB/ 128 GB internal memory/ 3G/ LTE/ GPS/ GLONASS/ Nano-SIM/ iOS 13 / 3046 mAh"
     },
     {
       "id": 3,
       "name": "Xiaomi Redmi Note 11 4/128GB Graphite Gray",
-      "price": 150,
+      "price": 243,
       "brand": "xiaomi",
       "color": "gray",
       "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
       "photoBack": "https://content.rozetka.com.ua/goods/images/big/277513823.jpg",
       "diagonal": 4.6,
-      "ram": 6
+      "battery": 5000,
+      "ram": 6,
+      "memory": 128,
+      "description": "Screen (6.43\", AMOLED, 2400x1080) / Qualcomm Snapdragon 680 (2.4 GHz) / main quad camera: 50 MP + 8 MP + 2 MP + 2 MP, front 13 MP / 4 GB RAM / 128 GB internal memory + microSD ( up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh"
     },
     {
       "id": 4,
       "name": "Motorola Moto G60 6/128GB Haze Gray",
-      "price": 200,
+      "price": 270,
       "brand": "motorola",
       "color": "gray",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
       "photoBack": "https://content.rozetka.com.ua/goods/images/big/220713295.jpg",
       "diagonal": 4.2,
-      "ram": 6
+      "battery": 6000,
+      "ram": 6,
+      "memory": 128,
+      "description": "Screen (6.8\", IPS, 2460x1080) / Qualcomm Snapdragon 732G (2 x 2.3 GHz + 6 x 1.8 GHz) / main triple camera: 108 MP + 8 MP + 2 MP, front camera: 32 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 6000 mAh"
     },
     {
       "id": 5,
       "name": "Nokia G11 3/32 Chacoal",
-      "price": 100,
+      "price": 138,
       "brand": "nokia",
       "color": "chocoal",
       "photo": "https://content.rozetka.com.ua/goods/images/big/263848149.jpg",
       "photoBack": "https://content1.rozetka.com.ua/goods/images/big/263848150.jpg",
       "diagonal": 4.5,
-      "ram": 3
+      "battery": 5050,
+      "ram": 3,
+      "memory": 32,
+      "description": "Screen (6.5\", IPS, 1600x720) / Unisoc T606 (2 x 1.6 GHz + 6 x 1.6 GHz) / triple main camera: 13 MP + 2 MP + 2 MP, front 8 MP / RAM 3 GB / 32 GB internal memory + microSD (up to 512 GB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 12 / 5050 mAh"
     },
     {
       "id": 6,
       "name": "Apple iPhone 13 Pro Max 128GB Graphite",
-      "price": 1000,
+      "price": 1327,
       "brand": "apple",
       "color": "graphite",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/221237435.jpg",
       "photoBack": "https://content2.rozetka.com.ua/goods/images/big/221022044.jpg",
       "diagonal": 5.1,
-      "ram": 6
+      "battery": 4352,
+      "ram": 6,
+      "memory": 128,
+      "description": "Screen (6.7\", OLED (Super Retina XDR), 2778x1284) / Apple A15 Bionic / triple main camera: 12 MP + 12 MP + 12 MP, front camera: 12 MP / 128 GB internal memory / 3G / LTE / 5G / GPS / Nano-SIM / iOS 15"
     },
     {
       "id": 7,
       "name": "Samsung Galaxy S22 Ultra 12/512GB Phantom Black",
-      "price": 1000,
+      "price": 1408,
       "brand": "samsung",
       "color": "black",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/253281756.jpg",
       "photoBack": "https://content2.rozetka.com.ua/goods/images/big/253281761.jpg",
       "diagonal": 5.6,
-      "ram": 12
+      "battery": 5000,
+      "ram": 12,
+      "memory": 512,
+      "description": "Screen (6.8\", Dynamic AMOLED 2X, 3088x1440) / Samsung Exynos 2200 (2.8 GHz + 2.5 GHz + 1.8 GHz) / main quad camera: 108 MP + 12 MP + 10 MP + 10 MP, front 40 MP / RAM 12 GB / 512 GB of internal memory / 3G / LTE / 5G / GPS / support for 2x SIM-cards (Nano-SIM) / Android 12 / 5000 mAh"
     },
     {
       "id": 8,
       "name": "Xiaomi Redmi 10C 4/128GB Graphite Gray",
-      "price": 150,
+      "price": 211,
       "brand": "xiaomi",
       "color": "gray",
       "photo": "https://content1.rozetka.com.ua/goods/images/big/265579429.jpg",
       "photoBack": "https://content2.rozetka.com.ua/goods/images/big/265579430.jpg",
       "diagonal": 6.71,
-      "ram": 4
+      "battery": 5000,
+      "ram": 4,
+      "memory": 128,
+      "description": "Screen (6.71\", IPS, 720x1650) / Qualcomm Snapdragon 680 (2.4 GHz + 1.9 GHz) / dual main camera: 50 MP + 2 MP, front 5 MP / RAM 4 GB / 128 GB internal memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh"
     },
     {
       "id": 9,
       "name": "Samsung Galaxy A53 5G 6/128GB White",
-      "price": 350,
+      "price": 406,
       "brand": "samsung",
       "color": "white",
       "photo": "https://content1.rozetka.com.ua/goods/images/big/263970083.jpg",
       "photoBack": "https://content1.rozetka.com.ua/goods/images/big/263970084.jpg",
       "diagonal": 6.5,
-      "ram": 6
+      "battery": 4400,
+      "ram": 6,
+      "memory": 128,
+      "description": "Screen (6.5\", Super AMOLED, 2400x1080) / Samsung Exynos 1280 (2 x 2.4 GHz + 6 x 2.0 GHz) / main quad camera: 64 MP + 12 MP + 5 MP + 5 MP, front 32 MP / RAM 6 GB / 128 GB internal memory + microSD (up to 1 TB)/ 3G/ LTE/ 5G/ GPS/ A-GPS/ GLONASS/ BDS/ support for 2 SIM-cards (Nano-SIM)/ Android 12/ 5000 mAh"
     },
     {
       "id": 10,
       "name": "Samsung Galaxy Fold3 12/512GB Phantom Silver",
-      "price": 1000,
+      "price": 1245,
       "brand": "samsung",
       "color": "black",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/201628829.jpg",
       "photoBack": "https://content.rozetka.com.ua/goods/images/big/201644024.jpg",
       "diagonal": 6.2,
-      "ram": 12
+      "battery": 4400,
+      "ram": 12,
+      "memory": 512,
+      "description": "Screen (6.2\", Dynamic AMOLED 2X, 2268x832) + (7.6\", Dynamic AMOLED 2X, 2208x1768) / Qualcomm Snapdragon 888 (2.84 GHz + 2.4 GHz + 1.8 GHz) / triple main camera: 12 MP + 12 MP + 12 MP, front camera 10 MP / auxiliary front 4 MP / RAM 12 GB / 512 GB of internal memory / 3G / LTE / 5G / GPS / support for 2x SIM-cards (Nano-SIM) + eSIM / Android 11 / 4400 mAh"
     },
     {
       "id": 11,
       "name": "Samsung Galaxy A13 3/32GB Black",
-      "price": 150,
+      "price": 189,
       "brand": "samsung",
       "color": "black",
       "photo": "https://content2.rozetka.com.ua/goods/images/big/263911060.jpg",
       "photoBack": "https://content.rozetka.com.ua/goods/images/big/263911061.jpg",
       "diagonal": 6.6,
-      "ram": 3
+      "battery": 5000,
+      "ram": 3,
+      "memory": 32,
+      "description": "Screen (6.6\", PLS, 2408x1080) / Samsung Exynos 850 (2.0 GHz) / main quad camera: 50 MP + 5 MP + 2 MP + 2 MP, front 8 MP / RAM 3 GB / 32 GB built-in memory + microSD ( up to 1 TB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 12 / 5000 mAh"
     },
     {
       "id": 12,
       "name": "Samsung Galaxy S22 Plus 8/128GB Phantom Black",
-      "price": 1000,
+      "price": 1029,
       "brand": "samsung",
       "color": "black",
       "photo": "https://content.rozetka.com.ua/goods/images/big/253280149.jpg",
       "photoBack": "https://content2.rozetka.com.ua/goods/images/big/253280159.jpg",
       "diagonal": 6.6,
-      "ram": 8
+      "battery": 4500,
+      "ram": 8,
+      "memory": 128,
+      "description": "Screen (6.6\", Dynamic AMOLED 2X, 2340x1080) / Samsung Exynos 2200 (2.8 GHz + 2.5 GHz + 1.8 GHz) / triple main camera: 50 MP + 12 MP + 10 MP, front 10 MP / RAM 8 GB / 128 GB built-in memory / 3G / LTE / 5G / GPS / support for 2 SIM-cards (Nano-SIM) / Android 12 / 4500 mAh"
+    },
+    {
+      "id": 13,
+      "name": "Infinix Note 10 Pro (X695C) 8/128Gb NFC Black",
+      "price": 250,
+      "brand": "infinix",
+      "color": "black",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/269757734.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/269757735.jpg",
+      "diagonal": 6.95,
+      "battery": 5000,
+      "ram": 8,
+      "memory": 128,
+      "description": "Screen (6.95\", IPS, 2460x1080) / MediaTek Helio G95 (2.05 GHz + 2.0 GHz) / main quad camera: 64 MP + 8 MP + 2 MP + 2 MP, front camera: 16 MP / RAM 8 GB / 128 GB built-in memory + microSD (up to 256 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh"
+    },
+    {
+      "id": 14,
+      "name": "Infinix HOT 12 Play NFC (X6816D) 4/64GB",
+      "price": 150,
+      "brand": "infinix",
+      "color": "black",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/271009585.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/271009540.jpg",
+      "diagonal": 6.82,
+      "battery": 6000,
+      "ram": 4,
+      "memory": 64,
+      "description": "Screen (6.82\", IPS, 1640x720) / Unisoc Tiger T610 (1.8 GHz) / triple main camera: 13 MP + 2 MP + AI, front 8 MP / RAM 4 GB / 64 GB internal memory + microSD (up to 512 GB) / 3G / LTE / GPS / dual SIM support (Nano-SIM) / Android 11 / 6000 mAh"
     }
   ]
 }

@@ -11,7 +11,7 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ProductsComponent implements OnInit, OnDestroy {
   page = 1;
-  pageSize = 8;
+  pageSize = 12;
 
   products: Product[] = [];
   private destroy$ = new Subject<boolean>();

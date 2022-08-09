@@ -8,4 +8,7 @@ export interface Product {
   photoBack: string;
   diagonal: number;
   ram: number;
+  memory: number;
+  battery: number;
+  description: string;
 }

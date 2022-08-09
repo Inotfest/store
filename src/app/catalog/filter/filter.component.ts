@@ -12,6 +12,8 @@ export class FilterComponent implements OnInit {
   colorList: SelectObject[] = Catalog.color;
   diagonalList: SelectObject[] = Catalog.diagonal;
   ramList: SelectObject[] = Catalog.ram;
+  batteryList: SelectObject[] = Catalog.battery;
+  memoryList: SelectObject[] = Catalog.memory;
 
   constructor() {}
 
