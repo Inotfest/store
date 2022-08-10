@@ -13,8 +13,11 @@ export class FilterService {
 
   constructor() {}
 
-  public filterItems(event: Event, value: valueProduct, type: string): void {
-    const eventInput = <HTMLInputElement>event.target;
+  public filterItems(
+    checked: boolean,
+    value: valueProduct,
+    type: string
+  ): void {
 
     const categoryValue =
       typeof value === 'object'
@@ -27,11 +30,12 @@ export class FilterService {
       category: categoryValue,
     };
 
-    if (eventInput.checked) {
+    if (checked) {
       this.arrayOfRequestParameters.push(optionsObject);
     } else {
-      const index = this.arrayOfRequestParameters.indexOf(optionsObject);
-      this.arrayOfRequestParameters.splice(index, 1);
+      this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
+        (item) => item.value !== value
+      );
     }
 
     this.sendingUrlParameters();

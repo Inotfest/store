@@ -14,7 +14,7 @@ export class СategoryComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public onChacngePoints(event: Event, value: valueProduct, type: string) {
-    this.filterService.filterItems(event, value, type);
+  public onChacngePoints(checked: boolean, value: valueProduct, type: string) {
+    this.filterService.filterItems(checked, value, type);
   }
 }

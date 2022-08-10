@@ -1,9 +1,14 @@
-<div class="product">
+<div
+  class="product"
+  (click)="openDialog()"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
   <div class="product__image">
-    <img class="product__img" [src]="product.photo" [alt]="product.name" />
+    <img class="product__img" [src]="photo()" [alt]="product.name" />
   </div>
   <div class="product__description">
     <p class="product__name">{{ product.name }}</p>
-    <p class="product__price">{{ product.price }} $</p>
+    <p class="product__price"><small>$</small>{{ product.price }}</p>
   </div>
 </div>
