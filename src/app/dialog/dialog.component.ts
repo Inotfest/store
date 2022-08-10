@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from '../interfaces/product';
 import { LocalStorageService } from '../services/local-storage.service';
-import { Dialog } from '../constants/Dialog';
+import { quantityOfGoods } from '../constants/quantityOfGoods';
 
 @Component({
   selector: 'app-dialog',
@@ -10,10 +10,7 @@ import { Dialog } from '../constants/Dialog';
   styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent implements OnInit {
-  public numberOfproducts = Dialog.MIN_NUMBER_OF_PRODUCTS;
-
-  private maxProducts = Dialog.MAX_NUMBER_OF_PRODUCTS;
-  private minProducts = Dialog.MIN_NUMBER_OF_PRODUCTS;
+  public numberOfproducts = quantityOfGoods.MIN_NUMBER_OF_PRODUCTS;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Product,
@@ -24,13 +21,13 @@ export class DialogComponent implements OnInit {
   ngOnInit(): void {}
 
   public plusProduct() {
-    if (this.numberOfproducts < this.maxProducts) {
+    if (this.numberOfproducts < quantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
       this.numberOfproducts++;
     }
   }
 
   public minusProduct() {
-    if (this.numberOfproducts > this.minProducts) {
+    if (this.numberOfproducts > quantityOfGoods.MIN_NUMBER_OF_PRODUCTS) {
       this.numberOfproducts--;
     }
   }

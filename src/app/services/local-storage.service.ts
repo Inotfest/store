@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
-import { ConstLocalStorage } from '../constants/LocalStorage';
+import { LocalStorageKey } from '../constants/LocalStorageKey';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +9,7 @@ export class LocalStorageService {
   constructor() {}
 
   public addProductToLocalstorage(product: Product) {
-    const key = ConstLocalStorage.KEY;
+    const key = LocalStorageKey.KEY;
 
     const dataFromLocalStorage = localStorage.getItem(key);
 

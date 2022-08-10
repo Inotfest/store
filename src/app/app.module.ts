@@ -17,6 +17,7 @@ import { InputPriceComponent } from './catalog/filter/input-price/input-price.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { DialogComponent } from './dialog/dialog.component';
+import { PriceDirective } from './directives/price.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DialogComponent } from './dialog/dialog.component';
     СategoryComponent,
     InputPriceComponent,
     DialogComponent,
+    PriceDirective,
   ],
   imports: [
     BrowserModule,
