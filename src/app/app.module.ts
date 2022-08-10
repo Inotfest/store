@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { PriceDirective } from './directives/price.directive';
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PriceDirective } from './directives/price.directive';
     InputPriceComponent,
     DialogComponent,
     PriceDirective,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,

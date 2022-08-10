@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from '../interfaces/product';
 import { LocalStorageService } from '../services/local-storage.service';
-import { quantityOfGoods } from '../constants/quantityOfGoods';
+import { quantityOfGoods } from '../constants/QuantityOfGoods';
 
 @Component({
   selector: 'app-dialog',
@@ -33,7 +33,11 @@ export class DialogComponent implements OnInit {
   }
 
   public addToBasket(product: Product) {
-    this.localStorageService.addProductToLocalstorage(product);
+    this.localStorageService.addProductToLocalstorage(
+      product,
+      this.numberOfproducts
+    );
+    this.close();
   }
 
   public close() {

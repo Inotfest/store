@@ -12,3 +12,8 @@ export interface Product {
   battery: number;
   description: string;
 }
+
+export interface Waybill {
+  product: Product;
+  numberOfproducts: number;
+}

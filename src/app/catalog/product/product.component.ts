@@ -32,12 +32,4 @@ export class ProductComponent implements OnInit {
   onMouseLeave() {
     this.photoBack = false;
   }
-
-  photo() {
-    if (this.photoBack) {
-      return this.product.photoBack;
-    } else {
-      return this.product.photo;
-    }
-  }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../interfaces/product';
+import { Product, Waybill } from '../interfaces/product';
 import { LocalStorageKey } from '../constants/LocalStorageKey';
 
 @Injectable({
@@ -8,23 +8,27 @@ import { LocalStorageKey } from '../constants/LocalStorageKey';
 export class LocalStorageService {
   constructor() {}
 
-  public addProductToLocalstorage(product: Product) {
-    const key = LocalStorageKey.KEY;
+  public addProductToLocalstorage(product: Product, amount: number) {
+    const waybill: Waybill = { product: product, numberOfproducts: amount };
 
-    const dataFromLocalStorage = localStorage.getItem(key);
+    const dataFromLocalStorage = localStorage.getItem(LocalStorageKey.KEY);
 
     if (dataFromLocalStorage) {
       const arrayProducts = JSON.parse(dataFromLocalStorage);
-      arrayProducts.push(product);
-      sendToLocalStorage(key, arrayProducts);
+      arrayProducts.push(waybill);
+      sendToLocalStorage(arrayProducts);
     } else {
-      const arrayProducts = [product];
-      sendToLocalStorage(key, arrayProducts);
+      const arrayProducts: Waybill[] = [waybill];
+      sendToLocalStorage(arrayProducts);
     }
 
-    function sendToLocalStorage(key: string, value: Product[]) {
+    function sendToLocalStorage(value: Waybill[]) {
       const jsonProducts = JSON.stringify(value);
-      localStorage.setItem(key, jsonProducts);
+      localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
     }
+  }
+
+  public checkLocalStorage() {
+    return !!localStorage.getItem(LocalStorageKey.KEY);
   }
 }
