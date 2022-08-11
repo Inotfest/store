@@ -1,4 +1,30 @@
 <div class="basket">
-  <div class="products"></div>
+  <div class="invoice" *ngFor="let invoice of invoices">
+    <div class="invoice__product">
+      <div class="invoice__image">
+        <img
+          class="invoice__img"
+          [src]="invoice.product.photo"
+          [alt]="invoice.product.name"
+        />
+      </div>
+      <div class="invoice__name">{{ invoice.product.name }}</div>
+      <div class="invoice__quantity">
+        {{ invoice.numberOfproducts }}
+      </div>
+      <div class="invoice__price" appPrice>
+        {{ invoice.product.price * invoice.numberOfproducts }}
+      </div>
+      <div class="invoice__delete">
+        <button
+          mat-stroked-button
+          color="warn"
+          (click)="deleteProduct(invoice.product.id)"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="checkout"></div>
 </div>

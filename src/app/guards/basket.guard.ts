@@ -22,6 +22,6 @@ export class BasketGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return this.localStorageService.checkLocalStorage();
+    return !!this.localStorageService.checkNumberOfGoods();
   }
 }

@@ -13,7 +13,7 @@ export interface Product {
   description: string;
 }
 
-export interface Waybill {
+export interface Invoice {
   product: Product;
   numberOfproducts: number;
 }
