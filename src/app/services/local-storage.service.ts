@@ -47,7 +47,7 @@ export class LocalStorageService {
   public deleteItemFromLocalStorage(id: number) {
     const arrayProducts: Invoice[] = this.getDataFromLocalStorage();
 
-    localStorage.removeItem(LocalStorageKey.KEY);
+    this.deleteAllItemsFromLocalStorage();
 
     const newArrayProducts = arrayProducts.filter(
       (item) => item.product.id !== id
@@ -58,5 +58,10 @@ export class LocalStorageService {
     const jsonProducts = JSON.stringify(newArrayProducts);
 
     localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
+  }
+
+  public deleteAllItemsFromLocalStorage() {
+    localStorage.removeItem(LocalStorageKey.KEY);
+    this.orders$.next(0);
   }
 }

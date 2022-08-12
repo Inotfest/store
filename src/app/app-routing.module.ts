@@ -11,7 +11,7 @@ const routes: Routes = [
     component: BasketComponent,
     canActivate: [BasketGuard],
   },
-  { path: '**', component: CatalogComponent },
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({

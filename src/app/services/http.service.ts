@@ -7,6 +7,7 @@ import {
   ValueObjectParameters,
 } from '../interfaces/filter';
 import { FilterType } from '../constants/Catalog';
+import { OrderForm } from '../interfaces/orderForm';
 
 @Injectable({
   providedIn: 'root',
@@ -38,5 +39,9 @@ export class HttpService {
       url += str;
     }
     return this.http.get<Product[]>(url);
+  }
+
+  public sendOrders(data: OrderForm) {
+    return this.http.post(`${environment.jsonPostOrders}`, data);
   }
 }
