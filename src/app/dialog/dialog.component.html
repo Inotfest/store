@@ -4,40 +4,50 @@
   </div>
   <div class="dialog__content">
     <div class="dialog__title">
-      <h1 class="dialog__h1">{{ data.name }}</h1>
-      <button mat-mini-fab class="dialog__close" (click)="close()">X</button>
+      <h1 class="dialog__caption">{{ data.name }}</h1>
+      <button class="dialog__close" mat-mini-fab (click)="close()">X</button>
     </div>
     <div class="dialog__description">
-      <h2>Main characteristics:</h2>
-      <p class="dialog__p">Brand: {{ data.brand | titlecase }}</p>
-      <p class="dialog__p">Color: {{ data.color | titlecase }}</p>
-      <p class="dialog__p">Diagonal: {{ data.diagonal }}</p>
-      <p class="dialog__p">RAM: {{ data.ram }}</p>
-      <p class="dialog__p">Memory: {{ data.memory }} GB</p>
-      <p class="dialog__p">Battery: {{ data.battery }} mAh</p>
-      <h2>Description:</h2>
-      <p class="dialog__p">{{ data.description }}</p>
-      <p class="dialog__price"><small>$</small>{{ data.price }}</p>
+      <h2 class="dialog__rubric">Main characteristics:</h2>
+      <p class="dialog__characteristic">Brand: {{ data.brand | titlecase }}</p>
+      <p class="dialog__characteristic">Color: {{ data.color | titlecase }}</p>
+      <p class="dialog__characteristic">Diagonal: {{ data.diagonal }}</p>
+      <p class="dialog__characteristic">RAM: {{ data.ram }}</p>
+      <p class="dialog__characteristic">Memory: {{ data.memory }} GB</p>
+      <p class="dialog__characteristic">Battery: {{ data.battery }} mAh</p>
+      <h2 class="dialog__rubric">Description:</h2>
+      <p class="dialog__characteristic">{{ data.description }}</p>
+      <p class="dialog__price" appPrice>{{ data.price }}</p>
     </div>
     <div class="dialog__buy">
       <div class="dialog__block-buttons">
         <div class="dialog__button">
-          <button mat-mini-fab color="primary" (click)="minusProduct()">
+          <button
+            class="dialog__btn"
+            mat-mini-fab
+            color="primary"
+            (click)="minusProduct()"
+          >
             -
           </button>
         </div>
         <div class="dialog__current">{{ numberOfproducts }}</div>
         <div class="dialog__button">
-          <button mat-mini-fab color="primary" (click)="plusProduct()">
+          <button
+            class="dialog__btn"
+            mat-mini-fab
+            color="primary"
+            (click)="plusProduct()"
+          >
             +
           </button>
         </div>
       </div>
       <div class="dialog__button">
         <button
+          class="dialog__basket"
           mat-flat-button
           color="warn"
-          class="dialog__basket"
           (click)="addToBasket(data)"
         >
           Add to Basket

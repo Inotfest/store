@@ -8,12 +8,12 @@ import { SelectObject } from 'src/app/interfaces/filter';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
-  brandList: SelectObject[] = Catalog.brand;
-  colorList: SelectObject[] = Catalog.color;
-  diagonalList: SelectObject[] = Catalog.diagonal;
-  ramList: SelectObject[] = Catalog.ram;
-  batteryList: SelectObject[] = Catalog.battery;
-  memoryList: SelectObject[] = Catalog.memory;
+  public brandList: SelectObject[] = Catalog.brand;
+  public colorList: SelectObject[] = Catalog.color;
+  public diagonalList: SelectObject[] = Catalog.diagonal;
+  public ramList: SelectObject[] = Catalog.ram;
+  public batteryList: SelectObject[] = Catalog.battery;
+  public memoryList: SelectObject[] = Catalog.memory;
 
   constructor() {}
 

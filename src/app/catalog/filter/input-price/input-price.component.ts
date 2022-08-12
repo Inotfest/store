@@ -8,10 +8,10 @@ import { InputPrice } from 'src/app/constants/Price';
   styleUrls: ['./input-price.component.scss'],
 })
 export class InputPriceComponent implements OnInit {
-  fromPrice = InputPrice.MIN_PRICE;
-  toPrice = InputPrice.MAX_RPICE;
+  public fromPrice = InputPrice.MIN_PRICE;
+  public toPrice = InputPrice.MAX_RPICE;
 
-  errorPrice = false;
+  public errorPrice = false;
 
   constructor(private filterService: FilterService) {}
 

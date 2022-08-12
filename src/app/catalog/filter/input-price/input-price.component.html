@@ -1,6 +1,6 @@
 <div class="price">
   <p class="price__title">Price</p>
-  <small>from</small>
+  <small class="price__range">from</small>
   <input
     class="price__input"
     type="number"
@@ -8,7 +8,7 @@
     [(ngModel)]="fromPrice"
     [class.price__input-error]="errorPrice"
   />
-  <small>to</small>
+  <small class="price__range">to</small>
   <input
     class="price__input"
     type="number"
@@ -19,8 +19,9 @@
   <small class="price__text-error" *ngIf="errorPrice">Price entry error</small>
   <div class="price__button">
     <button
-      mat-raised-button
+      class="price__btn"
       color="primary"
+      mat-raised-button
       (click)="onClickNumbers()"
     >
       Ok

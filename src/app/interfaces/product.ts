@@ -12,3 +12,8 @@ export interface Product {
   battery: number;
   description: string;
 }
+
+export interface Invoice {
+  product: Product;
+  numberOfproducts: number;
+}

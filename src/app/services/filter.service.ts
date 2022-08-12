@@ -18,7 +18,6 @@ export class FilterService {
     value: valueProduct,
     type: string
   ): void {
-
     const categoryValue =
       typeof value === 'object'
         ? FilterType.CATEGORY_RANGE

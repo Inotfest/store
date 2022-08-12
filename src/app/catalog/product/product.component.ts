@@ -11,13 +11,13 @@ import { Product } from 'src/app/interfaces/product';
 export class ProductComponent implements OnInit {
   @Input() product: Product;
 
-  photoBack = false;
+  public photoBack = false;
 
   constructor(private matDialog: MatDialog) {}
 
   ngOnInit(): void {}
 
-  openDialog() {
+  public openDialog() {
     this.matDialog.open(DialogComponent, {
       data: this.product,
       width: '50%',
@@ -25,19 +25,11 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  onMouseEnter() {
+  public onMouseEnter() {
     this.photoBack = true;
   }
 
-  onMouseLeave() {
+  public onMouseLeave() {
     this.photoBack = false;
-  }
-
-  photo() {
-    if (this.photoBack) {
-      return this.product.photoBack;
-    } else {
-      return this.product.photo;
-    }
   }
 }

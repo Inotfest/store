@@ -1,30 +1,62 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../interfaces/product';
-import { ConstLocalStorage } from '../constants/LocalStorage';
+import { Product, Invoice } from '../interfaces/product';
+import { LocalStorageKey } from '../constants/LocalStorageKey';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocalStorageService {
+  public itemsInTheСart = 0;
+
+  public orders$ = new Subject<number>();
+
   constructor() {}
 
-  public addProductToLocalstorage(product: Product) {
-    const key = ConstLocalStorage.KEY;
+  public addProductToLocalstorage(product: Product, amount: number) {
+    const waybill: Invoice = { product: product, numberOfproducts: amount };
 
-    const dataFromLocalStorage = localStorage.getItem(key);
+    let arrayProducts = [waybill];
 
-    if (dataFromLocalStorage) {
-      const arrayProducts = JSON.parse(dataFromLocalStorage);
-      arrayProducts.push(product);
-      sendToLocalStorage(key, arrayProducts);
-    } else {
-      const arrayProducts = [product];
-      sendToLocalStorage(key, arrayProducts);
+    const dataFromLocalStorage = this.getDataFromLocalStorage();
+
+    if (dataFromLocalStorage.length) {
+      arrayProducts = dataFromLocalStorage;
+      arrayProducts.push(waybill);
     }
 
-    function sendToLocalStorage(key: string, value: Product[]) {
-      const jsonProducts = JSON.stringify(value);
-      localStorage.setItem(key, jsonProducts);
+    const jsonProducts = JSON.stringify(arrayProducts);
+
+    localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
+
+    this.orders$.next(arrayProducts.length);
+  }
+
+  public checkNumberOfGoods() {
+    return this.getDataFromLocalStorage().length;
+  }
+
+  public getDataFromLocalStorage() {
+    const jsonProduct = localStorage.getItem(LocalStorageKey.KEY);
+    if (jsonProduct) {
+      return JSON.parse(jsonProduct);
     }
+    return [];
+  }
+
+  public deleteItemFromLocalStorage(id: number) {
+    const arrayProducts: Invoice[] = this.getDataFromLocalStorage();
+
+    localStorage.removeItem(LocalStorageKey.KEY);
+
+    const newArrayProducts = arrayProducts.filter(
+      (item) => item.product.id !== id
+    );
+
+    this.orders$.next(newArrayProducts.length);
+
+    const jsonProducts = JSON.stringify(newArrayProducts);
+
+    localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
   }
 }

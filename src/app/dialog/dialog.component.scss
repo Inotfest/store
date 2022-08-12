@@ -29,10 +29,10 @@
     align-items: center;
     width: 100%;
     position: relative;
-    padding-right: 2rem;
+    padding-right: 3rem;
   }
 
-  &__h1 {
+  &__caption {
     width: 100%;
   }
 
@@ -50,7 +50,7 @@
     flex-grow: 1;
   }
 
-  &__p {
+  &__characteristic {
     font-size: 1.4rem;
   }
 
@@ -78,6 +78,5 @@
   &__price {
     padding-top: 2rem;
     font-size: 3rem;
-    color: red;
   }
 }
