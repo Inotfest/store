@@ -26,22 +26,22 @@
 
   &__name {
     @extend %flex-element-center;
-    width: 30%;
+    width: 60%;
   }
 
   &__quantity {
     @extend %flex-element-center;
-    width: 20%;
+    width: 10%;
   }
 
   &__price {
     @extend %flex-element-center;
-    width: 20%;
+    width: 10%;
   }
 
   &__delete {
     @extend %flex-element-center;
-    width: 20%;
+    width: 10%;
   }
 }
 
