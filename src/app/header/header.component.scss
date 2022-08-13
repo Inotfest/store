@@ -2,6 +2,7 @@
   display: flex;
   flex-grow: 0;
   background-color: #232f3e;
+  padding: 1rem 0rem;
 
   &__box {
     display: flex;
@@ -15,37 +16,6 @@
 
 .logo {
   align-self: center;
-}
-
-.search-wrapper {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
-
-.search {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  &__input {
-    width: 90%;
-    background-color: white;
-    color: black;
-    padding: 0.5rem;
-    border-radius: 4px 0px 0px 4px;
-  }
-
-  &__button {
-    background-color: #febd69;
-    padding: 0.5rem;
-    border-radius: 0px 4px 4px 0px;
-    color: black;
-
-    &:hover {
-      background-color: #f3a847;
-    }
-  }
 }
 
 .nav {

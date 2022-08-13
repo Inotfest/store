@@ -1,17 +1,11 @@
 <header class="header">
   <div class="container header__box">
     <div class="logo">
-      <a class="logo__link" routerLink="/">Logo</a>
-    </div>
-    <div class="search-wrapper">
-      <div class="search">
-        <input class="search__input" type="text" [(ngModel)]="inputSearch" />
-        <button class="search__button" (click)="onSearch()">Search</button>
-      </div>
+      <a class="logo__link" routerLink="" (click)="reloadPage()">Logo</a>
     </div>
     <nav class="nav">
       <ul class="nav__elements">
-        <li class="nav__item"><a routerLink="/">Login</a></li>
+        <li class="nav__item"><a routerLink="">Login</a></li>
         <li
           class="nav__item"
           [matBadge]="numberOfOrders"

@@ -11,7 +11,7 @@ import { ProductsComponent } from './catalog/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CatalogComponent } from './catalog/catalog.component';
-import { ProductComponent } from './catalog/product/product.component';
+import { ProductComponent } from './catalog/products/product/product.component';
 import { СategoryComponent } from './catalog/filter/category/category.component';
 import { InputPriceComponent } from './catalog/filter/input-price/input-price.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +19,7 @@ import { MaterialModule } from './material/material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { PriceDirective } from './directives/price.directive';
 import { BasketComponent } from './basket/basket.component';
+import { SearchComponent } from './catalog/search/search.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BasketComponent } from './basket/basket.component';
     DialogComponent,
     PriceDirective,
     BasketComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
