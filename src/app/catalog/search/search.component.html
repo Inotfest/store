@@ -1,0 +1,9 @@
+<div class="search">
+  <input
+    class="search__input"
+    type="text"
+    [(ngModel)]="inputSearch"
+    (change)="onChangeInput()"
+  />
+  <button class="search__button" (click)="onSearch()">Search</button>
+</div>

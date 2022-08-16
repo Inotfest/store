@@ -1,16 +1,16 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from '../interfaces/product';
 import { LocalStorageService } from '../services/local-storage.service';
-import { quantityOfGoods } from '../constants/QuantityOfGoods';
+import { QuantityOfGoods } from '../constants/QuantityOfGoods';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss'],
 })
-export class DialogComponent implements OnInit {
-  public numberOfproducts = quantityOfGoods.MIN_NUMBER_OF_PRODUCTS;
+export class DialogComponent {
+  public numberOfproducts = QuantityOfGoods.MIN_NUMBER_OF_PRODUCTS;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Product,
@@ -18,21 +18,19 @@ export class DialogComponent implements OnInit {
     private localStorageService: LocalStorageService
   ) {}
 
-  ngOnInit(): void {}
-
-  public plusProduct() {
-    if (this.numberOfproducts < quantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
+  public plusProduct(): void {
+    if (this.numberOfproducts < QuantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
       this.numberOfproducts++;
     }
   }
 
-  public minusProduct() {
-    if (this.numberOfproducts > quantityOfGoods.MIN_NUMBER_OF_PRODUCTS) {
+  public minusProduct(): void {
+    if (this.numberOfproducts > QuantityOfGoods.MIN_NUMBER_OF_PRODUCTS) {
       this.numberOfproducts--;
     }
   }
 
-  public addToBasket(product: Product) {
+  public addToBasket(product: Product): void {
     this.localStorageService.addProductToLocalstorage(
       product,
       this.numberOfproducts
@@ -40,7 +38,7 @@ export class DialogComponent implements OnInit {
     this.close();
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 }

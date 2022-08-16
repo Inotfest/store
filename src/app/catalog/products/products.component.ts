@@ -10,23 +10,23 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit, OnDestroy {
-  page = 1;
-  pageSize = 12;
+  public page: number = 1;
+  public pageSize: number = 12;
 
-  products: Product[] = [];
+  public products: Product[] = [];
 
-  subscription$ = new Subscription();
+  private subscription$ = new Subscription();
 
   constructor(private filter: FilterService, private http: HttpService) {}
 
   ngOnInit(): void {
-    this.subscription$.add(this.getProduct());
+    this.subscription$.add(this.filterProducts());
     this.subscription$.add(
       this.http.getData().subscribe((res) => (this.products = res))
     );
   }
 
-  private getProduct() {
+  private filterProducts(): void {
     this.filter.productsFilter$.subscribe((value) =>
       this.http.getData(value).subscribe((res) => {
         this.page = 1;

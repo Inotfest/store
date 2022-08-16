@@ -3,10 +3,10 @@
     <app-product
       class="products__box"
       *ngFor="
-        let prod of products
+        let product of products
           | paginate: { itemsPerPage: pageSize, currentPage: page }
       "
-      [product]="prod"
+      [product]="product"
     >
     </app-product>
   </div>

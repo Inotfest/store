@@ -6,6 +6,8 @@ export const environment = {
   production: false,
   jsonUrl: 'http://localhost:3000/products?limit=100',
   jsonSearch: 'http://localhost:3000/products?q=',
+  jsonPostOrders: 'http://localhost:3000/orders',
+  jsonAddProduct: `http://localhost:3000/products`,
 };
 
 /*

@@ -7,13 +7,13 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class LocalStorageService {
-  public itemsInTheСart = 0;
+  public itemsInTheСart: number = 0;
 
   public orders$ = new Subject<number>();
 
   constructor() {}
 
-  public addProductToLocalstorage(product: Product, amount: number) {
+  public addProductToLocalstorage(product: Product, amount: number): void {
     const waybill: Invoice = { product: product, numberOfproducts: amount };
 
     let arrayProducts = [waybill];
@@ -32,11 +32,11 @@ export class LocalStorageService {
     this.orders$.next(arrayProducts.length);
   }
 
-  public checkNumberOfGoods() {
+  public checkNumberOfGoods(): number {
     return this.getDataFromLocalStorage().length;
   }
 
-  public getDataFromLocalStorage() {
+  public getDataFromLocalStorage(): Invoice[] {
     const jsonProduct = localStorage.getItem(LocalStorageKey.KEY);
     if (jsonProduct) {
       return JSON.parse(jsonProduct);
@@ -44,10 +44,10 @@ export class LocalStorageService {
     return [];
   }
 
-  public deleteItemFromLocalStorage(id: number) {
+  public deleteItemFromLocalStorage(id: number): void {
     const arrayProducts: Invoice[] = this.getDataFromLocalStorage();
 
-    localStorage.removeItem(LocalStorageKey.KEY);
+    this.deleteAllItemsFromLocalStorage();
 
     const newArrayProducts = arrayProducts.filter(
       (item) => item.product.id !== id
@@ -58,5 +58,10 @@ export class LocalStorageService {
     const jsonProducts = JSON.stringify(newArrayProducts);
 
     localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
+  }
+
+  public deleteAllItemsFromLocalStorage(): void {
+    localStorage.removeItem(LocalStorageKey.KEY);
+    this.orders$.next(0);
   }
 }
