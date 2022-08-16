@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Catalog } from 'src/app/constants/Catalog';
 import { SelectObject } from 'src/app/interfaces/filter';
 
@@ -7,7 +7,7 @@ import { SelectObject } from 'src/app/interfaces/filter';
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent {
   public brandList: SelectObject[] = Catalog.brand;
   public colorList: SelectObject[] = Catalog.color;
   public diagonalList: SelectObject[] = Catalog.diagonal;
@@ -16,6 +16,4 @@ export class FilterComponent implements OnInit {
   public memoryList: SelectObject[] = Catalog.memory;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

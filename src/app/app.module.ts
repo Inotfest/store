@@ -20,6 +20,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { PriceDirective } from './directives/price.directive';
 import { BasketComponent } from './basket/basket.component';
 import { SearchComponent } from './catalog/search/search.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SearchComponent } from './catalog/search/search.component';
     PriceDirective,
     BasketComponent,
     SearchComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

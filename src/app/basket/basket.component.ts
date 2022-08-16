@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OrderForm } from '../interfaces/orderForm';
-import { Invoice } from '../interfaces/product';
+import { Invoice, Product } from '../interfaces/product';
 import { HttpService } from '../services/http.service';
 import { LocalStorageService } from '../services/local-storage.service';
 
@@ -16,7 +16,7 @@ export class BasketComponent implements OnInit {
 
   public form: FormGroup;
 
-  public totalMoney = 0;
+  public totalMoney: number = 0;
 
   constructor(
     private localStorageService: LocalStorageService,
@@ -58,12 +58,14 @@ export class BasketComponent implements OnInit {
     this.getProducts();
   }
 
-  public deleteProduct(id: number) {
-    this.localStorageService.deleteItemFromLocalStorage(id);
-    this.getProducts();
+  public deleteProduct(product: Product): void {
+    if (product.id) {
+      this.localStorageService.deleteItemFromLocalStorage(product.id);
+      this.getProducts();
+    }
   }
 
-  private getProducts() {
+  private getProducts(): void {
     this.invoices = this.localStorageService.getDataFromLocalStorage();
 
     this.totalMoney = 0;
@@ -78,7 +80,7 @@ export class BasketComponent implements OnInit {
     }
   }
 
-  public submit() {
+  public submit(): void {
     const orderObject: OrderForm = {
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName,

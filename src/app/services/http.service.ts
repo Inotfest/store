@@ -8,6 +8,7 @@ import {
 } from '../interfaces/filter';
 import { FilterType } from '../constants/Catalog';
 import { OrderForm } from '../interfaces/orderForm';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ import { OrderForm } from '../interfaces/orderForm';
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  public getData(queryString?: OptionsObjectFilter[]) {
+  public getData(queryString?: OptionsObjectFilter[]): Observable<Product[]> {
     let url = environment.jsonUrl;
     if (queryString) {
       let str = '';
@@ -41,7 +42,11 @@ export class HttpService {
     return this.http.get<Product[]>(url);
   }
 
-  public sendOrders(data: OrderForm) {
-    return this.http.post(`${environment.jsonPostOrders}`, data);
+  public sendOrders(data: OrderForm): Observable<OrderForm> {
+    return this.http.post<OrderForm>(`${environment.jsonPostOrders}`, data);
+  }
+
+  public addProduct(data: Product): Observable<Product> {
+    return this.http.post<Product>(`${environment.jsonAddProduct}`, data);
   }
 }

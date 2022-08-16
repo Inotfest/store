@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FilterService } from 'src/app/services/filter.service';
 
@@ -7,18 +7,16 @@ import { FilterService } from 'src/app/services/filter.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent implements OnInit {
-  public inputSearch = '';
+export class SearchComponent {
+  public inputSearch: string = '';
   constructor(private router: Router, private filter: FilterService) {}
 
-  ngOnInit(): void {}
-
-  public onSearch() {
+  public onSearch(): void {
     this.router.navigate(['']);
     this.filter.searchFullText(this.inputSearch);
   }
 
-  public onChangeInput() {
+  public onChangeInput(): void {
     if (!this.inputSearch) {
       this.filter.searchFullText(this.inputSearch);
     }

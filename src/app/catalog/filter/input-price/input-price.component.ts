@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FilterService } from 'src/app/services/filter.service';
 import { InputPrice } from 'src/app/constants/Price';
 
@@ -7,17 +7,15 @@ import { InputPrice } from 'src/app/constants/Price';
   templateUrl: './input-price.component.html',
   styleUrls: ['./input-price.component.scss'],
 })
-export class InputPriceComponent implements OnInit {
-  public fromPrice = InputPrice.MIN_PRICE;
-  public toPrice = InputPrice.MAX_RPICE;
+export class InputPriceComponent {
+  public fromPrice: number = InputPrice.MIN_PRICE;
+  public toPrice: number = InputPrice.MAX_RPICE;
 
-  public errorPrice = false;
+  public errorPrice: boolean = false;
 
   constructor(private filterService: FilterService) {}
 
-  ngOnInit(): void {}
-
-  public onClickNumbers() {
+  public onClickNumbers(): void {
     if (this.fromPrice >= this.toPrice) {
       this.errorPrice = true;
     } else {

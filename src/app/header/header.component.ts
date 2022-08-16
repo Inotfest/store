@@ -8,11 +8,13 @@ import { LocalStorageService } from '../services/local-storage.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  public numberOfOrders = 0;
+  public numberOfOrders: number = 0;
 
   private subscription$ = new Subscription();
 
-  constructor(private localStorageService: LocalStorageService) {}
+  constructor(
+    private localStorageService: LocalStorageService,
+  ) {}
 
   ngOnInit(): void {
     this.subscription$.add(
@@ -23,11 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.checkBasket();
   }
 
-  public reloadPage() {
-    location.reload();
-  }
-
-  private checkBasket() {
+  private checkBasket(): void {
     const number = this.localStorageService.checkNumberOfGoods();
     if (number) {
       this.numberOfOrders = number;

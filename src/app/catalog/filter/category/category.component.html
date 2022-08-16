@@ -1,6 +1,7 @@
 <div class="category">
   <div *ngFor="let category of categoryList">
-    <mat-checkbox color="primary"
+    <mat-checkbox
+      color="primary"
       class="category__checkbox"
       [id]="category.title"
       (change)="onChacngePoints($event.checked, category.value, category.type)"

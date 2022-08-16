@@ -195,6 +195,76 @@
       "ram": 4,
       "memory": 64,
       "description": "Screen (6.82\", IPS, 1640x720) / Unisoc Tiger T610 (1.8 GHz) / triple main camera: 13 MP + 2 MP + AI, front 8 MP / RAM 4 GB / 64 GB internal memory + microSD (up to 512 GB) / 3G / LTE / GPS / dual SIM support (Nano-SIM) / Android 11 / 6000 mAh"
+    },
+    {
+      "name": "Samsung Galaxy M53 5G 6/128GB Brown",
+      "price": 430,
+      "brand": "",
+      "color": "brown",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/263855363.jpg",
+      "photoBack": "https://content.rozetka.com.ua/goods/images/big/263855364.jpg",
+      "diagonal": 6.7,
+      "ram": 6,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.7\", Super AMOLED Plus, 2400x1080) / Mediatek Dimensity 900 (2.4 GHz + 2.0 GHz) / main quad camera: 108 MP + 8 MP + 2 MP + 2 MP, front 32 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 1 TB) / 3G / LTE / 5G / GPS / support for 2 SIM-cards (Nano-SIM) / Android 12 / 5000 mAh",
+      "id": 15
+    },
+    {
+      "name": "Xiaomi Redmi 9A 2/32GB Glacial Blue",
+      "price": 134,
+      "brand": "",
+      "color": "blue",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/269024681.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/269024682.jpg",
+      "diagonal": 6.53,
+      "ram": 2,
+      "memory": 32,
+      "battery": 5000,
+      "description": "Screen (6.53\", IPS, 1600x720) / MediaTek Helio G25 (2.0 GHz) / main camera: 13 MP, front camera: 5 MP / RAM 2 GB / 32 GB internal memory + microSD (up to 256 GB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 10 (Q) / 5000 mAh",
+      "id": 16
+    },
+    {
+      "name": "Motorola G60S 6/128GB Ink Blue",
+      "price": 230,
+      "brand": "motorola",
+      "color": "blue",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/269040299.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/269040303.jpg",
+      "diagonal": 6.8,
+      "ram": 6,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.8\", IPS, 2460x1080) / MediaTek Helio G95 (2 x 2.05 GHz + 6 x 2.0 GHz) / main quad camera: 64 MP + 8 MP + 5 MP + 2 MP, front camera: 16 MP / RAM 6 GB / 128 GB of internal memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 17
+    },
+    {
+      "name": "Infinix Smart 6 2/32GB Polar Black",
+      "price": 120,
+      "brand": "infinix",
+      "color": "black",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/251018079.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/251018081.jpg",
+      "diagonal": 6.6,
+      "ram": 2,
+      "memory": 32,
+      "battery": 5000,
+      "description": "Screen (6.6\", IPS, 1600x720) / Unisoc SC9863A (1.6 GHz) / dual main camera: 8 MP + Ai, front camera: 5 MP / RAM 2 GB / 32 GB internal memory + microSD (up to 512 GB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 (Go edition) / 5000 mAh",
+      "id": 18
+    },
+    {
+      "name": "Samsung Galaxy A32 4/128GB Black",
+      "price": 280,
+      "brand": "samsung",
+      "color": "black",
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/175376690.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/175376709.jpg",
+      "diagonal": 6.4,
+      "ram": 4,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.4\", Super AMOLED, 2400x1080) / Mediatek Helio G80 (2 x 2.0 GHz + 6 x 1.8 GHz) / main quad camera: 64 MP + 8 MP + 5 MP + 5 MP, front camera: 20 MP / RAM 4 GB / 128 GB of internal memory + microSD (up to 1 TB) / 3G / LTE / GPS / A-GPS / GLONASS / BDS / support for 2x SIM-cards (Nano-SIM) / Android 11 (One UI) / 5000 mA* h",
+      "id": 19
     }
   ],
   "orders": [
@@ -306,6 +376,52 @@
         }
       ],
       "id": 2
+    },
+    {
+      "firstName": "dima",
+      "lastName": "asdasd",
+      "region": "asdasd",
+      "city": "asdasd",
+      "address": "asdasda",
+      "phoneNumber": "123123231",
+      "email": "",
+      "products": [
+        {
+          "product": {
+            "id": 4,
+            "name": "Motorola Moto G60 6/128GB Haze Gray",
+            "price": 270,
+            "brand": "motorola",
+            "color": "gray",
+            "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
+            "photoBack": "https://content.rozetka.com.ua/goods/images/big/220713295.jpg",
+            "diagonal": 4.2,
+            "battery": 6000,
+            "ram": 6,
+            "memory": 128,
+            "description": "Screen (6.8\", IPS, 2460x1080) / Qualcomm Snapdragon 732G (2 x 2.3 GHz + 6 x 1.8 GHz) / main triple camera: 108 MP + 8 MP + 2 MP, front camera: 32 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 6000 mAh"
+          },
+          "numberOfproducts": 1
+        },
+        {
+          "product": {
+            "id": 3,
+            "name": "Xiaomi Redmi Note 11 4/128GB Graphite Gray",
+            "price": 243,
+            "brand": "xiaomi",
+            "color": "gray",
+            "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
+            "photoBack": "https://content.rozetka.com.ua/goods/images/big/277513823.jpg",
+            "diagonal": 4.6,
+            "battery": 5000,
+            "ram": 6,
+            "memory": 128,
+            "description": "Screen (6.43\", AMOLED, 2400x1080) / Qualcomm Snapdragon 680 (2.4 GHz) / main quad camera: 50 MP + 8 MP + 2 MP + 2 MP, front 13 MP / 4 GB RAM / 128 GB internal memory + microSD ( up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh"
+          },
+          "numberOfproducts": 1
+        }
+      ],
+      "id": 3
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/dialog/dialog.component';
 import { Product } from 'src/app/interfaces/product';
@@ -8,16 +8,16 @@ import { Product } from 'src/app/interfaces/product';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
   @Input() product: Product;
 
-  public photoBack = false;
+  public photoBack: boolean = false;
 
   constructor(private matDialog: MatDialog) {}
 
   ngOnInit(): void {}
 
-  public openDialog() {
+  public openDialog(): void {
     this.matDialog.open(DialogComponent, {
       data: this.product,
       width: '50%',
@@ -25,11 +25,11 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  public onMouseEnter() {
+  public onMouseEnter(): void {
     this.photoBack = true;
   }
 
-  public onMouseLeave() {
+  public onMouseLeave(): void {
     this.photoBack = false;
   }
 }

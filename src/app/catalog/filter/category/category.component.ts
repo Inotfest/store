@@ -12,9 +12,15 @@ export class СategoryComponent implements OnInit {
 
   constructor(private filterService: FilterService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.filterService.arrayOfRequestParameters = [];
+  }
 
-  public onChacngePoints(checked: boolean, value: valueProduct, type: string) {
+  public onChacngePoints(
+    checked: boolean,
+    value: valueProduct,
+    type: string
+  ): void {
     this.filterService.filterItems(checked, value, type);
   }
 }

@@ -9,7 +9,7 @@ import { FilterType } from '../constants/Catalog';
 export class FilterService {
   public productsFilter$ = new Subject<OptionsObjectFilter[]>();
 
-  private arrayOfRequestParameters: OptionsObjectFilter[] = [];
+  public arrayOfRequestParameters: OptionsObjectFilter[] = [];
 
   constructor() {}
 
@@ -40,7 +40,7 @@ export class FilterService {
     this.sendingUrlParameters();
   }
 
-  public searchFullText(searchText: string) {
+  public searchFullText(searchText: string): void {
     const optionsObject: OptionsObjectFilter = {
       type: FilterType.SEARCH,
       value: searchText,
@@ -53,7 +53,7 @@ export class FilterService {
     this.sendingUrlParameters();
   }
 
-  public filterPrice(fromPrice: number, toPrice: number) {
+  public filterPrice(fromPrice: number, toPrice: number): void {
     const optionsObject: OptionsObjectFilter = {
       type: FilterType.PRICE,
       value: { minValue: fromPrice, maxValue: toPrice },
@@ -66,13 +66,13 @@ export class FilterService {
     this.sendingUrlParameters();
   }
 
-  private clearingDuplicateParameters(type: string) {
+  private clearingDuplicateParameters(type: string): void {
     this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
       (item) => item.type !== type
     );
   }
 
-  private sendingUrlParameters() {
+  private sendingUrlParameters(): void {
     this.productsFilter$.next(this.arrayOfRequestParameters);
   }
 }
