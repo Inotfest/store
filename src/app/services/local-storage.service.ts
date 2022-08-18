@@ -7,9 +7,8 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class LocalStorageService {
-  public itemsInTheСart: number = 0;
-
   public orders$ = new Subject<number>();
+  public changePrice$ = new Subject<number>();
 
   constructor() {}
 
@@ -25,11 +24,28 @@ export class LocalStorageService {
       arrayProducts.push(waybill);
     }
 
-    const jsonProducts = JSON.stringify(arrayProducts);
-
-    localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
-
+    this.sendToLocalStorage(arrayProducts);
     this.orders$.next(arrayProducts.length);
+  }
+
+  public chengeItemFromLocalStorage(invoice: Invoice): void {
+    let price = 0;
+
+    const dataFromLocalStorage = this.getDataFromLocalStorage();
+
+    const newArrayProducts = dataFromLocalStorage.map((item) =>
+      item.product.id === invoice.product.id ? invoice : item
+    );
+
+    localStorage.removeItem(LocalStorageKey.KEY);
+
+    this.sendToLocalStorage(newArrayProducts);
+
+    newArrayProducts.forEach(
+      (item) => (price += item.numberOfproducts * item.product.price)
+    );
+
+    this.changePrice$.next(price);
   }
 
   public checkNumberOfGoods(): number {
@@ -63,5 +79,16 @@ export class LocalStorageService {
   public deleteAllItemsFromLocalStorage(): void {
     localStorage.removeItem(LocalStorageKey.KEY);
     this.orders$.next(0);
+  }
+
+  public checkProductInBasket(product: Product): boolean {
+    const arrayProducts: Invoice[] = this.getDataFromLocalStorage();
+
+    return arrayProducts.some((item) => item.product.id === product.id);
+  }
+
+  private sendToLocalStorage(invoices: Invoice[]): void {
+    const jsonProducts = JSON.stringify(invoices);
+    localStorage.setItem(LocalStorageKey.KEY, jsonProducts);
   }
 }

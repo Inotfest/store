@@ -35,6 +35,10 @@
     width: 10%;
   }
 
+  &__button {
+    padding: 1rem;
+  }
+
   &__price {
     @extend %flex-element-center;
     width: 10%;

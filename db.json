@@ -293,6 +293,48 @@
       "battery": 5000,
       "description": "Screen (6.5\", LCD, 1600x720) / Unisoc Tiger T618 (1.8 GHz) / triple main camera: 50 MP + 2 MP + 2 MP, front camera: 8 MP / RAM 4 GB / 128 GB internal memory + microSD (up to 256 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
       "id": 21
+    },
+    {
+      "name": "Samsung Galaxy M23 5G 4/128GB Light Blue",
+      "price": 300,
+      "brand": "samsung",
+      "color": "blue",
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/263901756.jpg",
+      "photoBack": "https://content.rozetka.com.ua/goods/images/big/263901758.jpg",
+      "diagonal": 6.6,
+      "ram": 4,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.6\", TFT, 1080x2408) / Qualcomm Snapdragon 750G (2.2 GHz + 1.8 GHz) / triple main camera: 50 MP + 8 MP + 2 MP, front 8 MP / RAM 4 GB / 128 GB internal memory + microSD (up to 1 TB) / 3G / LTE / 5G / GPS / support for 2x SIM-cards (Nano-SIM) / Android 12 / 5000 mAh",
+      "id": 22
+    },
+    {
+      "name": "Samsung Galaxy S21 FE 6/128GB White",
+      "price": 716,
+      "brand": "samsung",
+      "color": "white",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/245952522.jpg",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/245952523.jpg",
+      "diagonal": 6.4,
+      "ram": 6,
+      "memory": 128,
+      "battery": 4500,
+      "description": "Screen (6.4\", Dynamic AMOLED 2X, 2340x1080) / Qualcomm Snapdragon 888 (2.84 GHz) / triple main camera: 12 MP + 12 MP + 8 MP, front 32 MP / RAM 6 GB / 128 GB internal memory / 3G / LTE / 5G / GPS / dual SIM support (Nano-SIM) / Android 11 / 4500 mAh",
+      "id": 23
+    },
+    {
+      "name": "Xiaomi Redmi 10 2022 6/128GB Pebble White",
+      "price": 165,
+      "brand": "xiaomi",
+      "color": "white",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/276497961.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/276497964.jpg",
+      "diagonal": 6.5,
+      "ram": 6,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.5\", IPS, 2400x1080) / Mediatek Helio G88 (2.0 GHz + 1.8 GHz) / main quad camera: 50 MP + 8 MP + 2 MP + 2 MP, front 8 MP / RAM 6 GB / 128 GB internal memory + microSD (up to 512 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 24
     }
   ],
   "orders": [

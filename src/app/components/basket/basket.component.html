@@ -11,7 +11,29 @@
         </div>
         <div class="invoice__name">{{ invoice.product.name }}</div>
         <div class="invoice__quantity">
-          {{ invoice.numberOfproducts }}
+          <div class="invoice__button">
+            <button
+              class="dialog__btn"
+              mat-mini-fab
+              color="primary"
+              (click)="minusProduct(invoice)"
+            >
+              -
+            </button>
+          </div>
+          <div class="invoice__number">
+            {{ invoice.numberOfproducts }}
+          </div>
+          <div class="invoice__button">
+            <button
+              class="dialog__btn"
+              mat-mini-fab
+              color="primary"
+              (click)="plusProduct(invoice)"
+            >
+              +
+            </button>
+          </div>
         </div>
         <div class="invoice__price" appPrice>
           {{ invoice.product.price * invoice.numberOfproducts }}

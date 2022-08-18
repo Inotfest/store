@@ -1,5 +1,5 @@
-import { Component, OnDestroy } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnDestroy, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { paramsOfCategory } from 'src/app/constants/Catalog';
 import { Product } from 'src/app/interfaces/product';
@@ -17,6 +17,8 @@ export class AddProductComponent implements OnDestroy {
   public brandList: string[] = paramsOfCategory.brand;
 
   private subscription$ = new Subscription();
+
+  @ViewChild('formDirective') private formDirective: NgForm;
 
   constructor(private httpService: HttpService) {
     this.form = new FormGroup({
@@ -59,22 +61,25 @@ export class AddProductComponent implements OnDestroy {
   }
 
   public submit(): void {
+    const value = this.form.value;
+
     const objProduct: Product = {
-      name: this.form.value.name,
-      price: this.form.value.price,
-      brand: this.form.value.brand,
-      color: this.form.value.color,
-      photo: this.form.value.photo,
-      photoBack: this.form.value.photoBack,
-      diagonal: this.form.value.diagonal,
-      ram: this.form.value.ram,
-      memory: this.form.value.memory,
-      battery: this.form.value.battery,
-      description: this.form.value.description,
+      name: value.name,
+      price: value.price,
+      brand: value.brand,
+      color: value.color,
+      photo: value.photo,
+      photoBack: value.photoBack,
+      diagonal: value.diagonal,
+      ram: value.ram,
+      memory: value.memory,
+      battery: value.battery,
+      description: value.description,
     };
 
+    this.formDirective.resetForm();
+
     this.subscription$.add(this.httpService.addProduct(objProduct).subscribe());
-    location.reload();
   }
 
   ngOnDestroy(): void {

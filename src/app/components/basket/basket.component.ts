@@ -6,6 +6,7 @@ import { Invoice, Product } from '../../interfaces/product';
 import { HttpService } from 'src/app/services/http.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { Subscription } from 'rxjs';
+import { QuantityOfGoods } from 'src/app/constants/QuantityOfGoods';
 
 @Component({
   selector: 'app-basket',
@@ -59,6 +60,26 @@ export class BasketComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getProducts();
+
+    this.subscriotion$.add(
+      this.localStorageService.changePrice$.subscribe(
+        (res) => (this.totalMoney = res)
+      )
+    );
+  }
+
+  public plusProduct(invoice: Invoice) {
+    if (invoice.numberOfproducts < QuantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
+      invoice.numberOfproducts++;
+      this.localStorageService.chengeItemFromLocalStorage(invoice);
+    }
+  }
+
+  public minusProduct(invoice: Invoice) {
+    if (invoice.numberOfproducts > QuantityOfGoods.MIN_NUMBER_OF_PRODUCTS) {
+      invoice.numberOfproducts--;
+      this.localStorageService.chengeItemFromLocalStorage(invoice);
+    }
   }
 
   public deleteProduct(product: Product): void {
