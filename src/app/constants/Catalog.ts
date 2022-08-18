@@ -23,6 +23,7 @@ enum Brand {
   XIAOMI = 'xiaomi',
   MOTOROLA = 'motorola',
   INFINIX = 'infinix',
+  REALME = 'realme',
 }
 
 enum Color {
@@ -43,6 +44,7 @@ export const paramsOfCategory = {
     Brand.XIAOMI,
     Brand.MOTOROLA,
     Brand.INFINIX,
+    Brand.REALME,
   ],
   [Categories.COLOR]: [
     Color.BLUE,
@@ -84,6 +86,11 @@ export const Catalog: SelectOptions = {
     {
       value: Brand.INFINIX,
       title: 'Infinix',
+      type: Categories.BRAND,
+    },
+    {
+      value: Brand.REALME,
+      title: 'Realme',
       type: Categories.BRAND,
     },
   ],

@@ -265,6 +265,34 @@
       "battery": 5000,
       "description": "Screen (6.4\", Super AMOLED, 2400x1080) / Mediatek Helio G80 (2 x 2.0 GHz + 6 x 1.8 GHz) / main quad camera: 64 MP + 8 MP + 5 MP + 5 MP, front camera: 20 MP / RAM 4 GB / 128 GB of internal memory + microSD (up to 1 TB) / 3G / LTE / GPS / A-GPS / GLONASS / BDS / support for 2x SIM-cards (Nano-SIM) / Android 11 (One UI) / 5000 mA* h",
       "id": 19
+    },
+    {
+      "name": "Realme C21Y 4/64GB no NFC Cross Black",
+      "price": 160,
+      "brand": "realme",
+      "color": "black",
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/251635576.png",
+      "photoBack": "https://content1.rozetka.com.ua/goods/images/big/251635577.jpg",
+      "diagonal": 6.5,
+      "ram": 4,
+      "memory": 64,
+      "battery": 5000,
+      "description": "Screen (6.5\", LCD, 1600x720) / Unisoc Tiger T610 (1.8 GHz) / triple main camera: 13 MP + 2 MP + 2 MP, front camera: 5 MP / RAM 4 GB / 64 GB internal memory + microSD (up to 128 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 10 / 5000 mAh",
+      "id": 20
+    },
+    {
+      "name": "Realme C25Y 4/128GB Glacier Blue",
+      "price": 189,
+      "brand": "realme",
+      "color": "blue",
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/238652200.jpg",
+      "photoBack": "https://content2.rozetka.com.ua/goods/images/big/238652201.jpg",
+      "diagonal": 6.5,
+      "ram": 4,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.5\", LCD, 1600x720) / Unisoc Tiger T618 (1.8 GHz) / triple main camera: 50 MP + 2 MP + 2 MP, front camera: 8 MP / RAM 4 GB / 128 GB internal memory + microSD (up to 256 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 21
     }
   ],
   "orders": [

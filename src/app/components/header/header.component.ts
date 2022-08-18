@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { LocalStorageService } from '../services/local-storage.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +12,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   private subscription$ = new Subscription();
 
-  constructor(
-    private localStorageService: LocalStorageService,
-  ) {}
+  constructor(private localStorageService: LocalStorageService) {}
 
   ngOnInit(): void {
     this.subscription$.add(

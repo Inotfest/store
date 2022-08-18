@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddProductComponent } from './add-product/add-product.component';
-import { BasketComponent } from './basket/basket.component';
-import { CatalogComponent } from './catalog/catalog.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { BasketComponent } from './components/basket/basket.component'; 
+import { CatalogComponent } from './components/catalog/catalog.component';
 import { BasketGuard } from './guards/basket.guard';
 
 const routes: Routes = [

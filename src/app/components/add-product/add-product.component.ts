@@ -1,19 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { paramsOfCategory } from '../constants/Catalog';
-import { Product } from '../interfaces/product';
-import { HttpService } from '../services/http.service';
+import { Subscription } from 'rxjs';
+import { paramsOfCategory } from 'src/app/constants/Catalog';
+import { Product } from 'src/app/interfaces/product';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.scss'],
 })
-export class AddProductComponent {
+export class AddProductComponent implements OnDestroy {
   public form: FormGroup;
 
   public colorList: string[] = paramsOfCategory.color;
   public brandList: string[] = paramsOfCategory.brand;
+
+  private subscription$ = new Subscription();
 
   constructor(private httpService: HttpService) {
     this.form = new FormGroup({
@@ -70,9 +73,11 @@ export class AddProductComponent {
       description: this.form.value.description,
     };
 
-    this.httpService
-      .addProduct(objProduct)
-      .subscribe((res) => console.log(res));
+    this.subscription$.add(this.httpService.addProduct(objProduct).subscribe());
     location.reload();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription$.unsubscribe();
   }
 }

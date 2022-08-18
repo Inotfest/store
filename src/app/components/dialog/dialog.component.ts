@@ -1,8 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Product } from '../interfaces/product';
-import { LocalStorageService } from '../services/local-storage.service';
-import { QuantityOfGoods } from '../constants/QuantityOfGoods';
+import { Product } from 'src/app/interfaces/product'; 
+import { LocalStorageService } from 'src/app/services/local-storage.service'; 
+import { QuantityOfGoods } from 'src/app/constants/QuantityOfGoods'; 
 
 @Component({
   selector: 'app-dialog',

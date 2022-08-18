@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { OrderForm } from '../interfaces/orderForm';
-import { Invoice, Product } from '../interfaces/product';
-import { HttpService } from '../services/http.service';
-import { LocalStorageService } from '../services/local-storage.service';
+import { OrderForm } from 'src/app/interfaces/orderForm';
+import { Invoice, Product } from '../../interfaces/product';
+import { HttpService } from 'src/app/services/http.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
   styleUrls: ['./basket.component.scss'],
 })
-export class BasketComponent implements OnInit {
+export class BasketComponent implements OnInit, OnDestroy {
   public invoices: Invoice[];
 
   public form: FormGroup;
 
   public totalMoney: number = 0;
+
+  private subscriotion$ = new Subscription();
 
   constructor(
     private localStorageService: LocalStorageService,
@@ -92,9 +95,15 @@ export class BasketComponent implements OnInit {
       products: this.invoices,
     };
 
-    this.http.sendOrders(orderObject).subscribe((res) => console.log(res));
+    this.http.sendOrders(orderObject).subscribe();
 
-    this.localStorageService.deleteAllItemsFromLocalStorage();
+    this.subscriotion$.add(
+      this.localStorageService.deleteAllItemsFromLocalStorage()
+    );
     this.router.navigate(['']);
+  }
+
+  ngOnDestroy(): void {
+    this.subscriotion$.unsubscribe();
   }
 }
