@@ -1,0 +1,84 @@
+.basket {
+  display: flex;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.invoice {
+  width: 70%;
+  font-size: 1.4rem;
+
+  &__product {
+    display: flex;
+    height: 10rem;
+    padding: 1rem;
+    border: 1px solid gray;
+  }
+
+  &__image {
+    @extend %flex-element-center;
+    width: 10%;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__name {
+    @extend %flex-element-center;
+    width: 60%;
+  }
+
+  &__quantity {
+    @extend %flex-element-center;
+    width: 10%;
+  }
+
+  &__button {
+    padding: 1rem;
+  }
+
+  &__price {
+    @extend %flex-element-center;
+    width: 10%;
+  }
+
+  &__delete {
+    @extend %flex-element-center;
+    width: 10%;
+  }
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 30%;
+
+  &__box {
+    border: 2px solid gray;
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+
+  &__pay {
+    font-size: 2rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+:host {
+  width: 100%;
+}
+
+%flex-element-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
