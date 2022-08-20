@@ -2,19 +2,12 @@
   <div class="products">
     <app-product
       class="products__box"
-      *ngFor="
-        let product of products
-          | paginate: { itemsPerPage: pageSize, currentPage: page }
-      "
+      *ngFor="let product of products"
       [product]="product"
     >
     </app-product>
   </div>
   <div class="pagination">
-    <pagination-controls
-      class="pagination__control"
-      (pageChange)="page = $event"
-      [autoHide]="true"
-    ></pagination-controls>
+    <app-paginaton></app-paginaton>
   </div>
 </div>

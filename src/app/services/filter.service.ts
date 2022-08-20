@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { OptionsObjectFilter, valueProduct } from '../interfaces/filter';
+import {
+  ObjFilterParams,
+  OptionsObjectFilter,
+  valueProduct,
+} from '../interfaces/filter';
 import { FilterType } from '../constants/Catalog';
+import { InputPrice } from '../constants/Price';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FilterService {
-  public productsFilter$ = new Subject<OptionsObjectFilter[]>();
+  public productsFilter$ = new Subject<ObjFilterParams>();
 
-  public arrayOfRequestParameters: OptionsObjectFilter[] = [];
+  public objParams: ObjFilterParams = {
+    page: 1,
+    pageSize: 10,
+    filterArray: [],
+  };
 
   constructor() {}
 
@@ -30,9 +39,9 @@ export class FilterService {
     };
 
     if (checked) {
-      this.arrayOfRequestParameters.push(optionsObject);
+      this.objParams.filterArray.push(optionsObject);
     } else {
-      this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
+      this.objParams.filterArray = this.objParams.filterArray.filter(
         (item) => item.value !== value
       );
     }
@@ -49,7 +58,7 @@ export class FilterService {
 
     this.clearingDuplicateParameters(FilterType.SEARCH);
 
-    this.arrayOfRequestParameters.push(optionsObject);
+    this.objParams.filterArray.push(optionsObject);
     this.sendingUrlParameters();
   }
 
@@ -62,17 +71,17 @@ export class FilterService {
 
     this.clearingDuplicateParameters(FilterType.PRICE);
 
-    this.arrayOfRequestParameters.push(optionsObject);
+    this.objParams.filterArray.push(optionsObject);
     this.sendingUrlParameters();
   }
 
-  private clearingDuplicateParameters(type: string): void {
-    this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
-      (item) => item.type !== type
-    );
+  public sendingUrlParameters(): void {
+    this.productsFilter$.next(this.objParams);
   }
 
-  private sendingUrlParameters(): void {
-    this.productsFilter$.next(this.arrayOfRequestParameters);
+  private clearingDuplicateParameters(type: string): void {
+    this.objParams.filterArray = this.objParams.filterArray.filter(
+      (item) => item.type !== type
+    );
   }
 }

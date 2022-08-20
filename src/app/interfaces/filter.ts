@@ -20,3 +20,9 @@ export interface ValueObjectParameters {
   maxValue: number;
   minValue: number;
 }
+
+export interface ObjFilterParams {
+  page: number;
+  pageSize: number;
+  filterArray: OptionsObjectFilter[];
+}

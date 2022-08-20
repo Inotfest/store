@@ -13,7 +13,7 @@ export class СategoryComponent implements OnInit {
   constructor(private filterService: FilterService) {}
 
   ngOnInit(): void {
-    this.filterService.arrayOfRequestParameters = [];
+    
   }
 
   public onChacngePoints(
