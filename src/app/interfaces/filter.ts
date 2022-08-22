@@ -14,6 +14,7 @@ export interface SelectObject {
   value: valueProduct;
   title: string;
   type: string;
+  checked?: boolean;
 }
 
 export interface ValueObjectParameters {

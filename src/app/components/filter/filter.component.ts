@@ -15,7 +15,5 @@ export class FilterComponent {
   public batteryList: SelectObject[] = Catalog.battery;
   public memoryList: SelectObject[] = Catalog.memory;
 
-  constructor() {
-    
-  }
+  constructor() {}
 }

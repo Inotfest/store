@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { Subscription } from 'rxjs';
-import { PaginationService } from 'src/app/services/pagination.service';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-paginaton',
@@ -9,22 +9,34 @@ import { PaginationService } from 'src/app/services/pagination.service';
   styleUrls: ['./paginaton.component.scss'],
 })
 export class PaginatonComponent implements OnInit, OnDestroy {
-  length = this.paginationService.length;
-  pageSize = this.paginationService.pageSize;
-  pageSizeOptions = this.paginationService.pageSizeOptions;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  private subscription$ = new Subscription();
+  public pageSize = this.filterService.pageSize;
+  public pageSizeOptions = this.filterService.pageSizeOptions;
+  public length = this.filterService.numberOfItems;
+  public pageIndex = this.filterService.pageIndex;
 
-  constructor(private paginationService: PaginationService) {}
+  subscription$ = new Subscription();
+
+  constructor(private filterService: FilterService) {}
 
   ngOnInit(): void {
     this.subscription$.add(
-      this.paginationService.totalCount$.subscribe((res) => (this.length = res))
+      this.filterService.totalCount$.subscribe((res) => (this.length = res))
+    );
+    this.subscription$.add(
+      this.filterService.initialPage$.subscribe(() => {
+        this.paginator.firstPage();
+      })
     );
   }
 
   changePage(event: PageEvent) {
-    this.paginationService.pageChange(event.pageIndex, event.pageSize);
+    this.filterService.pageChange(
+      event.pageIndex,
+      event.pageSize,
+      event.length
+    );
   }
 
   ngOnDestroy(): void {
