@@ -20,7 +20,7 @@ export class BasketComponent implements OnInit, OnDestroy {
 
   public totalMoney: number = 0;
 
-  private subscriotion$ = new Subscription();
+  private subscription$ = new Subscription();
 
   constructor(
     private localStorageService: LocalStorageService,
@@ -61,7 +61,7 @@ export class BasketComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getProducts();
 
-    this.subscriotion$.add(
+    this.subscription$.add(
       this.localStorageService.changePrice$.subscribe(
         (res) => (this.totalMoney = res)
       )
@@ -118,13 +118,13 @@ export class BasketComponent implements OnInit, OnDestroy {
 
     this.http.sendOrders(orderObject).subscribe();
 
-    this.subscriotion$.add(
+    this.subscription$.add(
       this.localStorageService.deleteAllItemsFromLocalStorage()
     );
     this.router.navigate(['']);
   }
 
   ngOnDestroy(): void {
-    this.subscriotion$.unsubscribe();
+    this.subscription$.unsubscribe();
   }
 }

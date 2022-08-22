@@ -14,9 +14,16 @@ export interface SelectObject {
   value: valueProduct;
   title: string;
   type: string;
+  checked?: boolean;
 }
 
 export interface ValueObjectParameters {
   maxValue: number;
   minValue: number;
+}
+
+export interface ObjFilterParams {
+  page: number;
+  pageSize: number;
+  filterArray: OptionsObjectFilter[];
 }

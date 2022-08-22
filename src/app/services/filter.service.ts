@@ -1,15 +1,38 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import { OptionsObjectFilter, valueProduct } from '../interfaces/filter';
+import { BehaviorSubject, Subject } from 'rxjs';
+import {
+  ObjFilterParams,
+  OptionsObjectFilter,
+  valueProduct,
+} from '../interfaces/filter';
 import { FilterType } from '../constants/Catalog';
+import { PageSize } from '../constants/PageSize';
+import { InputPrice } from '../constants/Price';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FilterService {
-  public productsFilter$ = new Subject<OptionsObjectFilter[]>();
+  public pageIndex = 0;
+  public pageSize = PageSize.SIZE;
+  public pageSizeOptions = [8, 12, 24];
+  public numberOfItems = 100;
 
-  public arrayOfRequestParameters: OptionsObjectFilter[] = [];
+  public requestParametersObject: ObjFilterParams = {
+    page: 1,
+    pageSize: PageSize.SIZE,
+    filterArray: [],
+  };
+
+  public fromPrice = InputPrice.MIN_PRICE;
+  public toPrice = InputPrice.MAX_RPICE;
+
+  public productsFilter$ = new BehaviorSubject<ObjFilterParams>(
+    this.requestParametersObject
+  );
+
+  public totalCount$ = new Subject<number>();
+  public initialPage$ = new Subject<number>();
 
   constructor() {}
 
@@ -30,14 +53,16 @@ export class FilterService {
     };
 
     if (checked) {
-      this.arrayOfRequestParameters.push(optionsObject);
+      this.requestParametersObject.filterArray.push(optionsObject);
     } else {
-      this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
-        (item) => item.value !== value
-      );
+      this.requestParametersObject.filterArray =
+        this.requestParametersObject.filterArray.filter(
+          (item) => item.value !== value
+        );
     }
 
     this.sendingUrlParameters();
+    this.initialPage$.next(0);
   }
 
   public searchFullText(searchText: string): void {
@@ -49,8 +74,9 @@ export class FilterService {
 
     this.clearingDuplicateParameters(FilterType.SEARCH);
 
-    this.arrayOfRequestParameters.push(optionsObject);
+    this.requestParametersObject.filterArray.push(optionsObject);
     this.sendingUrlParameters();
+    this.initialPage$.next(0);
   }
 
   public filterPrice(fromPrice: number, toPrice: number): void {
@@ -62,17 +88,33 @@ export class FilterService {
 
     this.clearingDuplicateParameters(FilterType.PRICE);
 
-    this.arrayOfRequestParameters.push(optionsObject);
+    this.requestParametersObject.filterArray.push(optionsObject);
+    this.sendingUrlParameters();
+
+    this.fromPrice = fromPrice;
+    this.toPrice = toPrice;
+    this.initialPage$.next(0);
+  }
+
+  public sendingUrlParameters(): void {
+    this.productsFilter$.next(this.requestParametersObject);
+  }
+
+  public pageChange(page: number, pageSize: number, length: number) {
+    this.pageIndex = page;
+    this.pageSize = pageSize;
+    this.numberOfItems = length;
+
+    this.requestParametersObject.page = page + 1;
+    this.requestParametersObject.pageSize = pageSize;
+
     this.sendingUrlParameters();
   }
 
   private clearingDuplicateParameters(type: string): void {
-    this.arrayOfRequestParameters = this.arrayOfRequestParameters.filter(
-      (item) => item.type !== type
-    );
-  }
-
-  private sendingUrlParameters(): void {
-    this.productsFilter$.next(this.arrayOfRequestParameters);
+    this.requestParametersObject.filterArray =
+      this.requestParametersObject.filterArray.filter(
+        (item) => item.type !== type
+      );
   }
 }

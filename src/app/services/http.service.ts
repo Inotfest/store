@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../interfaces/product';
 import { environment } from 'src/environments/environment';
-import {
-  OptionsObjectFilter,
-  ValueObjectParameters,
-} from '../interfaces/filter';
+import { ObjFilterParams, ValueObjectParameters } from '../interfaces/filter';
 import { FilterType } from '../constants/Catalog';
 import { OrderForm } from '../interfaces/orderForm';
 import { Observable } from 'rxjs';
+import { PageSize } from '../constants/PageSize';
 
 @Injectable({
   providedIn: 'root',
@@ -16,11 +14,16 @@ import { Observable } from 'rxjs';
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  public getData(queryString?: OptionsObjectFilter[]): Observable<Product[]> {
-    let url = environment.jsonUrl;
-    if (queryString) {
+  public getData(queryParams?: ObjFilterParams) {
+    let url =
+      environment.jsonUrl +
+      `_page=${queryParams?.page ?? 1}&_limit=${
+        queryParams?.pageSize ?? PageSize.SIZE
+      }`;
+
+    if (queryParams) {
       let str = '';
-      for (let item of queryString) {
+      for (let item of queryParams.filterArray) {
         switch (item.category) {
           case FilterType.SEARCH:
             str += `&q=${item.value}`;
@@ -39,7 +42,8 @@ export class HttpService {
       }
       url += str;
     }
-    return this.http.get<Product[]>(url);
+    console.log(url);
+    return this.http.get(url, { observe: 'response' });
   }
 
   public sendOrders(data: OrderForm): Observable<OrderForm> {

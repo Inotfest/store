@@ -13,7 +13,20 @@ export class СategoryComponent implements OnInit {
   constructor(private filterService: FilterService) {}
 
   ngOnInit(): void {
-    this.filterService.arrayOfRequestParameters = [];
+    this.checkMark();
+  }
+
+  checkMark() {
+    this.filterService.requestParametersObject.filterArray.forEach(
+      (product) => {
+        this.categoryList = this.categoryList.map((item) => {
+          if (item.value === product.value) {
+            item.checked = true;
+          }
+          return item;
+        });
+      }
+    );
   }
 
   public onChacngePoints(

@@ -8,8 +8,8 @@ import { InputPrice } from 'src/app/constants/Price';
   styleUrls: ['./input-price.component.scss'],
 })
 export class InputPriceComponent {
-  public fromPrice: number = InputPrice.MIN_PRICE;
-  public toPrice: number = InputPrice.MAX_RPICE;
+  public fromPrice: number = this.filterService.fromPrice;
+  public toPrice: number = this.filterService.toPrice;
 
   public errorPrice: boolean = false;
 

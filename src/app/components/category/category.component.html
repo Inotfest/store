@@ -4,6 +4,7 @@
       color="primary"
       class="category__checkbox"
       [id]="category.title"
+      [checked]="category.checked"
       (change)="onChacngePoints($event.checked, category.value, category.type)"
       >{{ category.title }}
     </mat-checkbox>

@@ -21,6 +21,7 @@ import { BasketComponent } from './components/basket/basket.component';
 import { SearchComponent } from './components/search/search.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { PriceDirective } from './directives/price.directive';
+import { PaginatonComponent } from './components/paginaton/paginaton.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PriceDirective } from './directives/price.directive';
     BasketComponent,
     SearchComponent,
     AddProductComponent,
+    PaginatonComponent,
   ],
   imports: [
     BrowserModule,
