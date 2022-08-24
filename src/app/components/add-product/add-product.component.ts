@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { paramsOfCategory } from 'src/app/constants/Catalog';
@@ -10,7 +10,7 @@ import { HttpService } from 'src/app/services/http.service';
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.scss'],
 })
-export class AddProductComponent implements OnDestroy {
+export class AddProductComponent implements OnInit, OnDestroy {
   public form: FormGroup;
 
   public colorList: string[] = paramsOfCategory.color;
@@ -20,7 +20,9 @@ export class AddProductComponent implements OnDestroy {
 
   @ViewChild('formDirective') private formDirective: NgForm;
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: HttpService) {}
+
+  ngOnInit(): void {
     this.form = new FormGroup({
       name: new FormControl('', [
         Validators.required,
