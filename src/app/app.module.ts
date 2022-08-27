@@ -22,6 +22,9 @@ import { SearchComponent } from './components/search/search.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { PriceDirective } from './directives/price.directive';
 import { PaginatonComponent } from './components/paginaton/paginaton.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { PaginatonComponent } from './components/paginaton/paginaton.component';
     SearchComponent,
     AddProductComponent,
     PaginatonComponent,
+    CheckboxComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

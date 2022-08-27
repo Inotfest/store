@@ -31,7 +31,7 @@ export class PaginatonComponent implements OnInit, OnDestroy {
     );
   }
 
-  changePage(event: PageEvent) {
+  public changePage(event: PageEvent): void {
     this.filterService.pageChange(
       event.pageIndex,
       event.pageSize,

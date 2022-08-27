@@ -7,16 +7,13 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { LocalStorageService } from '../services/local-storage.service';
+import { AuthService } from '../services/auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class BasketGuard implements CanActivate {
-  constructor(
-    private localStorageService: LocalStorageService,
-    private router: Router
-  ) {}
+export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -26,11 +23,10 @@ export class BasketGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const isProducts = !!this.localStorageService.checkNumberOfGoods();
-
-    if (isProducts) {
+    if (this.authService.isAuthenticated()) {
       return true;
     }
+
     this.router.navigate(['']);
     return false;
   }

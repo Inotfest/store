@@ -221,27 +221,27 @@ export const Catalog: SelectOptions = {
     {
       value: 32,
       title: '32 GB',
-      type: Categories.RAM,
+      type: Categories.MEMORY,
     },
     {
       value: 64,
       title: '64 GB',
-      type: Categories.RAM,
+      type: Categories.MEMORY,
     },
     {
       value: 128,
       title: '128 GB',
-      type: Categories.RAM,
+      type: Categories.MEMORY,
     },
     {
       value: 256,
       title: '256 GB',
-      type: Categories.RAM,
+      type: Categories.MEMORY,
     },
     {
       value: 512,
       title: '512 GB',
-      type: Categories.RAM,
+      type: Categories.MEMORY,
     },
   ],
 };

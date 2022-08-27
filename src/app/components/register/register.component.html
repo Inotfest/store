@@ -1,0 +1,55 @@
+<div class="register">
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" />
+      <mat-error *ngIf="form.controls.email.hasError('required')"
+        >You must enter a value</mat-error
+      >
+      <mat-error *ngIf="form.controls.email.hasError('email')"
+        >Not a valid email</mat-error
+      >
+      <mat-error
+        *ngIf="
+          form.controls.email.hasError('minlength') ||
+          form.controls.email.hasError('maxlength')
+        "
+        >Invalid character length</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Username</mat-label>
+      <input type="text" matInput formControlName="username" />
+      <mat-error *ngIf="form.controls.username.hasError('required')"
+        >You must enter a value</mat-error
+      >
+      <mat-error
+        *ngIf="
+          form.controls.username.hasError('minlength') ||
+          form.controls.username.hasError('maxlength')
+        "
+        >Invalid character length</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" #password />
+      <mat-error *ngIf="form.controls.password.hasError('required')"
+        >You must enter a value</mat-error
+      >
+      <mat-error
+        *ngIf="
+          form.controls.password.hasError('minlength') ||
+          form.controls.password.hasError('maxlength')
+        "
+        >Invalid character length</mat-error
+      >
+    </mat-form-field>
+    <div class="form__button">
+      <button mat-raised-button color="primary" [disabled]="form.invalid">
+        Signup
+      </button>
+    </div>
+  </form>
+</div>

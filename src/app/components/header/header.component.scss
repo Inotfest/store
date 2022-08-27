@@ -27,5 +27,11 @@
 
   &__item {
     padding-left: 2rem;
+
+    &_user {
+      padding-right: 2rem;
+      font-size: 1.7rem;
+      color: rgb(199, 198, 198);
+    }
   }
 }
