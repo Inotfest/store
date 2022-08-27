@@ -1,4 +1,105 @@
 {
+  "users": [
+    {
+      "email": "dima@gmail.com",
+      "password": "$2a$10$yS5LSCw6vZw//PBQC.WzRehVugpIQlsNto4Jj4mHuI.E2SW0XvtYO",
+      "id": 1
+    },
+    {
+      "email": "dima2@gmail.com",
+      "password": "$2a$10$vE6OJdzdxoDz4VfhsBVy2udtw5L8EKBsrSAUUkG1UBOZfJW/qWp8S",
+      "id": 2
+    },
+    {
+      "email": "karina@gmail.com",
+      "password": "$2a$10$an0QZsDQ1qZCYcDqTLA3IOlcSiyCX/ZYL.crSOzEIye.Mj36VsyzC",
+      "id": 3
+    },
+    {
+      "email": "dima777@gmail.com",
+      "password": "$2a$10$pM0b8KyVQhAWEkJh.yY2WOxmKsj/5eVg3/UmTp7.IwXcgj64JaNza",
+      "username": "dima",
+      "id": 4
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$WPbfwRvzl6HrE/TbHdmIjOh1pcYpyqH/mMdF8NWV8/U8MBcHH0Xoy",
+      "username": "dima",
+      "id": 5
+    },
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$lQahKJZQIDLbd.qDIKf9FOa9qItJFppOBSMGjlsu7waZQEd1ws4CW",
+      "username": "dima",
+      "id": 6
+    },
+    {
+      "email": "adsas@aad.rsa",
+      "password": "$2a$10$R5/UDDDcQs5LM0yNJOu5dO0Klf8Ybwsy7n8rplfhnjv8AHPZPZfZK",
+      "username": "aasdas",
+      "id": 7
+    },
+    {
+      "email": "asdsas@masd.re",
+      "password": "$2a$10$roMr4c3YcnuwhIHbfcSLZeTcPXlUw0uTJClssjLx4Hfpf./6OGr6y",
+      "username": "asdasd",
+      "id": 8
+    },
+    {
+      "email": "asdsas@masd.res",
+      "password": "$2a$10$pniKEZ2KIFSXAVFsmkp.Neks6.0BjW6lJBmFK4B4KDiuMs2eikyd2",
+      "username": "asdasd",
+      "id": 9
+    },
+    {
+      "email": "asdsd@asdasd.asd",
+      "password": "$2a$10$rafG/32MtM1trBQ3hKgNveybLMew4ZtfgJtFvo2Q7/Din5Z9OvhI.",
+      "username": "asdasd",
+      "id": 10
+    },
+    {
+      "email": "123123@masd.asd",
+      "password": "$2a$10$/BREuab0Wgw5Qe/f.bK1RulAEFW6vNqGLLmnATHVERWC2gXyH6auK",
+      "username": "adsa",
+      "id": 11
+    },
+    {
+      "email": "asdsadasd@gmi.sa",
+      "password": "$2a$10$rXnDQUqej8VKFgHALdx5nO40uPlxGHIWA3RFor9STifxHAJsS0rPq",
+      "username": "asdasd",
+      "id": 12
+    },
+    {
+      "email": "sSSD@gmail.com",
+      "password": "$2a$10$qMy1RCKhqEaV/7in.159Q.8bR79Po0UqAAHBS8r9zGBtA9ofw.cQi",
+      "username": "asdasd",
+      "id": 13
+    },
+    {
+      "email": "lmmmlm@gail.com",
+      "password": "$2a$10$dvV6AgGowK5kTktv2o16KejH/R/yKQuI2KXNhbJlXOmKGk4zEpD1O",
+      "username": "asdasd",
+      "id": 14
+    },
+    {
+      "email": "asdadW@gmail.com",
+      "password": "$2a$10$c/OAcDYn7HwvFC5qXFkbWuFqfNAyRaljLgG9rCSci5up93kIfW0/e",
+      "username": "awww",
+      "id": 15
+    },
+    {
+      "email": "asdasd@gas.com",
+      "password": "$2a$10$yD7DH/l4bGcFBNw5UvOC6.GOUmlMGW3FXY6rYQLnBiRVZeOosC8A6",
+      "username": "asdasd",
+      "id": 16
+    },
+    {
+      "email": "asdasd@gmail.com",
+      "password": "$2a$10$ZuZb5biPQzJw0eSGK3TYcOs2atyaHG.CHS5w6WanLjY26aP.Q98ui",
+      "username": "asdasd",
+      "id": 17
+    }
+  ],
   "products": [
     {
       "id": 1,

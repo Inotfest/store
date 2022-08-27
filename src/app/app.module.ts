@@ -23,6 +23,8 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { PriceDirective } from './directives/price.directive';
 import { PaginatonComponent } from './components/paginaton/paginaton.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     AddProductComponent,
     PaginatonComponent,
     CheckboxComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,17 @@
     </div>
     <nav class="nav">
       <ul class="nav__elements">
-        <li class="nav__item"><a routerLink="/add">Add product</a></li>
+        <ng-container *ngIf="user">
+          <li class="nav__item nav__item_user">Hi, {{ user }}</li>
+          <li class="nav__item">
+            <a routerLink="" (click)="logout()">Logout</a>
+          </li>
+          <li class="nav__item"><a routerLink="/add">Add product</a></li>
+        </ng-container>
+        <ng-container *ngIf="!user">
+          <li class="nav__item"><a routerLink="/login">Login</a></li>
+          <li class="nav__item"><a routerLink="/register">Signup</a></li>
+        </ng-container>
         <li
           class="nav__item"
           [matBadge]="numberOfOrders"
