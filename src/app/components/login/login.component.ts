@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
   form: FormGroup;
 
-  public errorMessage = '';
+  public errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  public onSubmit(): void {
     const value = this.form.value;
 
     const user: User = {

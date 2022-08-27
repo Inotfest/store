@@ -49,7 +49,7 @@ export class DialogComponent implements OnInit {
     this.isInBasket = this.localStorageService.checkProductInBasket(this.data);
   }
 
-  public goToBasket() {
+  public goToBasket(): void {
     this.close();
     this.router.navigate(['basket']);
   }

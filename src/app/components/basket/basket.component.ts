@@ -68,7 +68,7 @@ export class BasketComponent implements OnInit, OnDestroy {
     );
   }
 
-  public plusProduct(invoice: Invoice) {
+  public plusProduct(invoice: Invoice): void {
     if (invoice.numberOfproducts < QuantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
       invoice.numberOfproducts++;
       this.localStorageService.chengeItemFromLocalStorage(invoice);

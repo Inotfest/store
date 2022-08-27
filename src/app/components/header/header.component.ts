@@ -10,7 +10,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   public numberOfOrders: number = 0;
-  public user = '';
+  public user: string = '';
 
   private subscription$ = new Subscription();
 
@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.checkUser();
   }
 
-  public logout() {
+  public logout(): void {
     this.authService.logout();
   }
 
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  private checkUser() {
+  private checkUser(): void {
     this.user = this.authService.getEmailUser();
   }
 

@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterComponent implements OnInit {
   form: FormGroup;
 
-  public errorMessage = '';
+  public errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 

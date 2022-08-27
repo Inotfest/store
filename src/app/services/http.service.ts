@@ -42,7 +42,6 @@ export class HttpService {
       }
       url += str;
     }
-    console.log(url);
     return this.http.get(url, { observe: 'response' });
   }
 

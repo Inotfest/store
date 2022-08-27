@@ -43,7 +43,7 @@ export class AuthService {
     return '';
   }
 
-  private token() {
+  private token(): string {
     const jsonToken = localStorage.getItem(TokenData.KEY);
     if (jsonToken) {
       const objToken: TokenDate = JSON.parse(jsonToken);
