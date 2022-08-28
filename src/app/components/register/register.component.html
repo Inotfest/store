@@ -34,7 +34,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Password</mat-label>
-      <input type="password" matInput formControlName="password" #password />
+      <input type="password" matInput formControlName="password" />
       <mat-error *ngIf="form.controls.password.hasError('required')"
         >You must enter a value</mat-error
       >

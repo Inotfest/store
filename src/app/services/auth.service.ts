@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, tap } from 'rxjs';
+import { Subject, tap, finalize } from 'rxjs';
 import { TokenData } from '../constants/Token';
 import { TokenDate, TokenKey, User } from '../interfaces/user';
 
@@ -12,16 +12,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  public login(data: User) {
-    return this.http
-      .post<TokenKey>(`http://localhost:3000/login`, data)
-      .pipe(tap(this.setToken));
-  }
-
-  public register(data: User) {
-    return this.http
-      .post<TokenKey>(`http://localhost:3000/register`, data)
-      .pipe(tap(this.setToken));
+  public singin(path: string, data: User) {
+    return this.http.post<TokenKey>(path, data).pipe(
+      tap((res) => {
+        this.setToken(res);
+      })
+    );
   }
 
   public logout(): void {
@@ -33,7 +29,7 @@ export class AuthService {
     return !!this.token();
   }
 
-  public getEmailUser(): string {
+  public getUser(): string {
     const jsonToken = this.token();
 
     if (jsonToken) {
@@ -69,6 +65,8 @@ export class AuthService {
         username: response.user.username,
       };
       localStorage.setItem(TokenData.KEY, JSON.stringify(tokenDate));
+
+      this.currentUser$.next(response.user.username);
     } else {
       localStorage.removeItem(TokenData.KEY);
     }

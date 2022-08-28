@@ -1,5 +1,10 @@
 <div class="add">
-  <form class="form" [formGroup]="form" (ngSubmit)="submit()" #formDirective="ngForm">
+  <form
+    class="form"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    #formDirective="ngForm"
+  >
     <div class="form__row">
       <div class="form__colum">
         <mat-form-field appearance="fill" class="example-full-width">
@@ -19,7 +24,12 @@
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Photo 2</mat-label>
           <span matPrefix>url &nbsp;</span>
-          <input type="text" matInput formControlName="photoBack" />
+          <input type="text" matInput formControlName="photo2" />
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Photo 3</mat-label>
+          <span matPrefix>url &nbsp;</span>
+          <input type="text" matInput formControlName="photo2" />
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>battery</mat-label>

@@ -1,6 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  FormGroupDirective,
+  NgForm,
+  ValidationErrors,
+  Validators,
+} from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 import { Router } from '@angular/router';
+import { URL } from 'src/app/constants/Url';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -39,6 +49,7 @@ export class RegisterComponent implements OnInit {
 
   public onSubmit(): void {
     const value = this.form.value;
+    const path = URL.JSON + URL.REGISTER;
 
     const user: User = {
       email: value.email,
@@ -46,9 +57,8 @@ export class RegisterComponent implements OnInit {
       password: value.password,
     };
 
-    this.authService.register(user).subscribe({
+    this.authService.singin(path, user).subscribe({
       next: () => {
-        this.authService.currentUser$.next(user.username);
         this.errorMessage = '';
         this.router.navigate(['']);
       },

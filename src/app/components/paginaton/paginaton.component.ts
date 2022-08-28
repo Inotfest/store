@@ -37,6 +37,7 @@ export class PaginatonComponent implements OnInit, OnDestroy {
       event.pageSize,
       event.length
     );
+    window.scrollTo(0, 0);
   }
 
   ngOnDestroy(): void {

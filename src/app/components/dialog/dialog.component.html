@@ -1,11 +1,33 @@
 <div class="dialog">
   <div class="dialog__photo">
-    <img class="dialog__img" [src]="data.photo" [alt]="data.name" />
+    <div class="dialog__list-photo">
+      <img
+        class="dialog__img dialog__img_small"
+        [src]="data.photo"
+        (click)="img.src = data.photo"
+      />
+      <img
+        class="dialog__img dialog__img_small"
+        [src]="data.photo2"
+        (click)="img.src = data.photo2"
+      />
+      <img
+        *ngIf="data.photo3"
+        class="dialog__img dialog__img_small"
+        [src]="data.photo3"
+        (click)="img.src = data.photo3"
+      />
+    </div>
+    <div class="dialog__main-photo">
+      <img class="dialog__img" #img [src]="data.photo" [alt]="data.name" />
+    </div>
   </div>
   <div class="dialog__content">
     <div class="dialog__title">
       <h1 class="dialog__caption">{{ data.name }}</h1>
-      <button class="dialog__close" mat-mini-fab (click)="close()">X</button>
+      <button class="dialog__close" mat-mini-fab (click)="close()">
+        &times;
+      </button>
     </div>
     <div class="dialog__description">
       <h2 class="dialog__rubric">Main characteristics:</h2>
