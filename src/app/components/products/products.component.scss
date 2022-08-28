@@ -5,6 +5,15 @@
   width: 100%;
 }
 
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 4rem;
+  color: red;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;

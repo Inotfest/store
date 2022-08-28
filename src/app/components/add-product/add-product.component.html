@@ -10,31 +10,67 @@
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Name</mat-label>
           <input type="text" matInput formControlName="name" />
+          <mat-error *ngIf="form.controls.name.hasError('required')"
+            >This field must not be empty</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.name.hasError('minlength') ||
+              form.controls.name.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Price</mat-label>
           <span matPrefix>$ &nbsp;</span>
           <input type="number" matInput formControlName="price" />
+          <mat-error *ngIf="form.controls.price.hasError('required')"
+            >This field must not be empty</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.price.hasError('min') ||
+              form.controls.price.hasError('max')
+            "
+            >Enter the correct price</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Photo</mat-label>
           <span matPrefix>url &nbsp;</span>
           <input type="text" matInput formControlName="photo" />
+          <mat-error *ngIf="form.controls.photo.hasError('required')"
+            >This field must not be empty</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Photo 2</mat-label>
           <span matPrefix>url &nbsp;</span>
           <input type="text" matInput formControlName="photo2" />
+          <mat-error *ngIf="form.controls.photo2.hasError('required')"
+            >This field must not be empty</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Photo 3</mat-label>
           <span matPrefix>url &nbsp;</span>
-          <input type="text" matInput formControlName="photo2" />
+          <input type="text" matInput formControlName="photo3" />
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>battery</mat-label>
           <span matPrefix>mAh &nbsp;</span>
           <input type="number" matInput formControlName="battery" />
+          <mat-error *ngIf="form.controls.battery.hasError('required')"
+            >This field must not be empty</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.battery.hasError('min') ||
+              form.controls.battery.hasError('max')
+            "
+            >Enter the correct data</mat-error
+          >
         </mat-form-field>
       </div>
       <div class="form__colum">
@@ -42,11 +78,31 @@
           <span matPrefix>GB &nbsp;</span>
           <mat-label>Memory</mat-label>
           <input type="number" matInput formControlName="memory" />
+          <mat-error *ngIf="form.controls.memory.hasError('required')"
+            >This field must not be empty</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.memory.hasError('min') ||
+              form.controls.memory.hasError('max')
+            "
+            >Enter the correct data</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <span matPrefix>"" &nbsp;</span>
           <mat-label>Diagonal</mat-label>
           <input type="number" matInput formControlName="diagonal" />
+          <mat-error *ngIf="form.controls.diagonal.hasError('required')"
+            >This field must not be empty</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.diagonal.hasError('min') ||
+              form.controls.diagonal.hasError('max')
+            "
+            >Enter the correct data</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>Brand</mat-label>
@@ -55,6 +111,9 @@
               brand | titlecase
             }}</mat-option>
           </mat-select>
+          <mat-error *ngIf="form.controls.brand.hasError('required')"
+            >You must choose a brand</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>Color</mat-label>
@@ -63,11 +122,24 @@
               color | titlecase
             }}</mat-option>
           </mat-select>
+          <mat-error *ngIf="form.controls.brand.hasError('required')"
+            >You must choose a color</mat-error
+          >
         </mat-form-field>
         <mat-form-field appearance="fill" class="example-full-width">
           <span matPrefix>GB &nbsp;</span>
           <mat-label>RAM</mat-label>
           <input type="number" matInput formControlName="ram" />
+          <mat-error *ngIf="form.controls.diagonal.hasError('required')"
+            >This field must not be empty</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.diagonal.hasError('min') ||
+              form.controls.diagonal.hasError('max')
+            "
+            >Enter the correct data</mat-error
+          >
         </mat-form-field>
       </div>
     </div>
@@ -81,6 +153,16 @@
             matInput
             formControlName="description"
           ></textarea>
+          <mat-error *ngIf="form.controls.description.hasError('required')"
+            >You must write a description</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.description.hasError('minlength') ||
+              form.controls.description.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
       </div>
     </div>

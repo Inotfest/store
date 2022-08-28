@@ -33,6 +33,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  public clearError(): void {
+    this.errorMessage = '';
+  }
+
   public onSubmit(): void {
     const value = this.form.value;
     const path = URL.JSON + URL.LOGIN;
@@ -49,7 +53,9 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['']);
       },
       error: (error) => {
-        this.errorMessage = `Status error: ${error.status}`;
+        if (error.status === 400) {
+          this.errorMessage = `Wrong email or password`;
+        }
       },
     });
   }

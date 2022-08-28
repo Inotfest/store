@@ -1,14 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  AbstractControl,
-  FormControl,
-  FormGroup,
-  FormGroupDirective,
-  NgForm,
-  ValidationErrors,
-  Validators,
-} from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { URL } from 'src/app/constants/Url';
 import { User } from 'src/app/interfaces/user';
@@ -47,6 +38,10 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  public clearError(): void {
+    this.errorMessage = '';
+  }
+
   public onSubmit(): void {
     const value = this.form.value;
     const path = URL.JSON + URL.REGISTER;
@@ -63,7 +58,9 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['']);
       },
       error: (error) => {
-        this.errorMessage = `Status error: ${error.status}`;
+        if (error.status === 400) {
+          this.errorMessage = `This email is already taken`;
+        }
       },
     });
   }

@@ -1,9 +1,12 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { paramsOfCategory } from 'src/app/constants/Catalog';
 import { Product } from 'src/app/interfaces/product';
 import { HttpService } from 'src/app/services/http.service';
+import { InputPrice } from '../../constants/Price';
+import { DialogNotificationComponent } from '../dialog-notification/dialog-notification.component';
 
 @Component({
   selector: 'app-add-product',
@@ -20,7 +23,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
 
   @ViewChild('formDirective') private formDirective: NgForm;
 
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService, private matDialog: MatDialog) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -29,7 +32,11 @@ export class AddProductComponent implements OnInit, OnDestroy {
         Validators.minLength(3),
         Validators.maxLength(50),
       ]),
-      price: new FormControl('', [Validators.required, Validators.min(1)]),
+      price: new FormControl('', [
+        Validators.required,
+        Validators.min(InputPrice.MIN_PRICE),
+        Validators.max(InputPrice.MAX_RPICE),
+      ]),
       brand: new FormControl('', [Validators.required]),
       color: new FormControl('', [Validators.required]),
       photo: new FormControl('', [Validators.required]),
@@ -37,7 +44,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
       photo3: new FormControl(''),
       diagonal: new FormControl('', [
         Validators.required,
-        Validators.min(1),
+        Validators.min(4.1),
         Validators.max(10),
       ]),
       ram: new FormControl(0, [
@@ -81,9 +88,23 @@ export class AddProductComponent implements OnInit, OnDestroy {
       description: value.description,
     };
 
-    this.formDirective.resetForm();
+    this.subscription$.add(
+      this.httpService.addProduct(objProduct).subscribe({
+        next: () => {
+          this.openDialog('Product added');
+          this.formDirective.resetForm();
+        },
+        error: (error) => this.openDialog(error.message),
+      })
+    );
+  }
 
-    this.subscription$.add(this.httpService.addProduct(objProduct).subscribe());
+  private openDialog(text: string): void {
+    this.matDialog.open(DialogNotificationComponent, {
+      data: text,
+      width: '25%',
+      height: '25%',
+    });
   }
 
   ngOnDestroy(): void {
