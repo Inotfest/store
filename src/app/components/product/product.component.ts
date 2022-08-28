@@ -11,7 +11,7 @@ import { Product } from 'src/app/interfaces/product';
 export class ProductComponent {
   @Input() product: Product;
 
-  public photoBack: boolean = false;
+  public photo2: boolean = false;
 
   constructor(private matDialog: MatDialog) {}
 
@@ -20,16 +20,16 @@ export class ProductComponent {
   public openDialog(): void {
     this.matDialog.open(DialogComponent, {
       data: this.product,
-      width: '50%',
+      width: '60%',
       height: '75%',
     });
   }
 
   public onMouseEnter(): void {
-    this.photoBack = true;
+    this.photo2 = true;
   }
 
   public onMouseLeave(): void {
-    this.photoBack = false;
+    this.photo2 = false;
   }
 }

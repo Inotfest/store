@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { URL } from 'src/app/constants/Url';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -32,8 +33,13 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  public clearError(): void {
+    this.errorMessage = '';
+  }
+
   public onSubmit(): void {
     const value = this.form.value;
+    const path = URL.JSON + URL.LOGIN;
 
     const user: User = {
       email: value.email,
@@ -41,14 +47,15 @@ export class LoginComponent implements OnInit {
       password: value.password,
     };
 
-    this.authService.login(user).subscribe({
+    this.authService.singin(path, user).subscribe({
       next: () => {
-        this.authService.currentUser$.next(user.username);
         this.errorMessage = '';
         this.router.navigate(['']);
       },
       error: (error) => {
-        this.errorMessage = `Status error: ${error.status}`;
+        if (error.status === 400) {
+          this.errorMessage = `Wrong email or password`;
+        }
       },
     });
   }

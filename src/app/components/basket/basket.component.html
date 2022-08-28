@@ -13,6 +13,7 @@
         <div class="invoice__quantity">
           <div class="invoice__button">
             <button
+              [disabled]="disabledMinus"
               class="dialog__btn"
               mat-mini-fab
               color="primary"
@@ -26,6 +27,7 @@
           </div>
           <div class="invoice__button">
             <button
+              [disabled]="disabledPlus"
               class="dialog__btn"
               mat-mini-fab
               color="primary"
@@ -62,31 +64,94 @@
         <mat-form-field class="example-full-width">
           <mat-label>First Name</mat-label>
           <input type="text" matInput formControlName="firstName" />
+          <mat-error *ngIf="form.controls.firstName.hasError('required')"
+            >You must enter your first name</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.firstName.hasError('minlength') ||
+              form.controls.firstName.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Last Name</mat-label>
           <input type="text" matInput formControlName="lastName" />
+          <mat-error *ngIf="form.controls.lastName.hasError('required')"
+            >You must enter your last name</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.lastName.hasError('minlength') ||
+              form.controls.lastName.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Region</mat-label>
           <input type="text" matInput formControlName="region" />
+          <mat-error *ngIf="form.controls.region.hasError('required')"
+            >You must enter your region</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.region.hasError('minlength') ||
+              form.controls.region.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>City</mat-label>
           <input type="text" matInput formControlName="city" />
+          <mat-error *ngIf="form.controls.city.hasError('required')"
+            >You must enter your city</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.city.hasError('minlength') ||
+              form.controls.city.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Address</mat-label>
           <input type="text" matInput formControlName="address" />
+          <mat-error *ngIf="form.controls.address.hasError('required')"
+            >You must enter your address</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.address.hasError('minlength') ||
+              form.controls.address.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Telephone</mat-label>
           <span matPrefix>+38 &nbsp;</span>
           <input type="tel" matInput formControlName="phoneNumber" />
+          <mat-error *ngIf="form.controls.phoneNumber.hasError('required')"
+            >You must enter your phone number</mat-error
+          >
+          <mat-error
+            *ngIf="
+              form.controls.phoneNumber.hasError('minlength') ||
+              form.controls.phoneNumber.hasError('maxlength')
+            "
+            >Invalid character length</mat-error
+          >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
           <input type="email" matInput formControlName="email" />
+          <mat-error *ngIf="form.controls.email.hasError('email')"
+            >Not a valid email</mat-error
+          >
         </mat-form-field>
         <button
           type="submit"

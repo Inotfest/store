@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class DialogComponent implements OnInit {
   public numberOfproducts = QuantityOfGoods.MIN_NUMBER_OF_PRODUCTS;
   public isInBasket: boolean = false;
+  public disabledMinus: boolean = true;
+  public disabledPlus: boolean = false;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Product,
@@ -29,12 +31,21 @@ export class DialogComponent implements OnInit {
     if (this.numberOfproducts < QuantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
       this.numberOfproducts++;
     }
+    if (this.numberOfproducts === QuantityOfGoods.MAX_NUMBER_OF_PRODUCTS) {
+      this.disabledPlus = true;
+    }
+    this.disabledMinus = false;
   }
 
   public minusProduct(): void {
     if (this.numberOfproducts > QuantityOfGoods.MIN_NUMBER_OF_PRODUCTS) {
       this.numberOfproducts--;
     }
+    if (this.numberOfproducts === 1) {
+      this.disabledMinus = true;
+    }
+
+    this.disabledPlus = false;
   }
 
   public addToBasket(product: Product): void {

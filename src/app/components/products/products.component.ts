@@ -13,6 +13,8 @@ import { HttpService } from 'src/app/services/http.service';
 export class ProductsComponent implements OnInit, OnDestroy {
   public products: Product[] = [];
 
+  public notFound: boolean = false;
+
   private subscription$ = new Subscription();
 
   constructor(
@@ -21,18 +23,30 @@ export class ProductsComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.subscription$.add(this.filterProducts());
+    this.filterProducts();
   }
 
   private filterProducts(): void {
-    this.filterService.productsFilter$.subscribe((res) =>
-      this.http.getData(res).subscribe((response) => {
-        const totalCount = response.headers.get('X-Total-Count') as string;
-        const totalCountNumber = +totalCount;
+    this.subscription$.add(
+      this.filterService.productsFilter$.subscribe((res) =>
+        this.subscription$.add(
+          this.http.getData(res).subscribe((response) => {
+            const totalCount = response.headers.get('X-Total-Count') as string;
+            const totalCountNumber = +totalCount;
 
-        this.filterService.totalCount$.next(totalCountNumber);
-        this.products = response.body as Product[];
-      })
+            this.filterService.totalCount$.next(totalCountNumber);
+
+            const res = response.body as Product[];
+
+            if (res.length) {
+              this.products = res;
+              this.notFound = false;
+            } else {
+              this.notFound = true;
+            }
+          })
+        )
+      )
     );
   }
 

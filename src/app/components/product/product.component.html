@@ -6,15 +6,15 @@
 >
   <div class="product__image">
     <img
-      *ngIf="!photoBack"
+      *ngIf="!photo2"
       class="product__img"
       [src]="product.photo"
       [alt]="product.name"
     />
     <img
-      *ngIf="photoBack"
+      *ngIf="photo2"
       class="product__img"
-      [src]="product.photoBack"
+      [src]="product.photo2"
       [alt]="product.name"
     />
   </div>

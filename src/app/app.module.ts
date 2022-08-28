@@ -25,6 +25,7 @@ import { PaginatonComponent } from './components/paginaton/paginaton.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DialogNotificationComponent } from './components/dialog-notification/dialog-notification.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { RegisterComponent } from './components/register/register.component';
     CheckboxComponent,
     LoginComponent,
     RegisterComponent,
+    DialogNotificationComponent,
   ],
   imports: [
     BrowserModule,

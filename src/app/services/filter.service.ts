@@ -15,7 +15,7 @@ import { InputPrice } from '../constants/Price';
 export class FilterService {
   public pageIndex = 0;
   public pageSize = PageSize.SIZE;
-  public pageSizeOptions = [8, 12, 24];
+  public pageSizeOptions = [12, 16, 20, 24];
   public numberOfItems = 100;
 
   public requestParametersObject: ObjFilterParams = {

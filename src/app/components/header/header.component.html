@@ -6,7 +6,7 @@
     <nav class="nav">
       <ul class="nav__elements">
         <ng-container *ngIf="user">
-          <li class="nav__item nav__item_user">Hi, {{ user }}</li>
+          <li class="nav__item nav__item_user">Hi, {{ user | titlecase }}</li>
           <li class="nav__item">
             <a routerLink="" (click)="logout()">Logout</a>
           </li>

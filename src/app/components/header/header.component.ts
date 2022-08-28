@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   private checkUser(): void {
-    this.user = this.authService.getEmailUser();
+    this.user = this.authService.getUser();
   }
 
   ngOnDestroy(): void {

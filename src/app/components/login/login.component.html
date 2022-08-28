@@ -1,6 +1,13 @@
 <div class="login">
-  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
-    <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+  <form
+    class="form"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    (click)="clearError()"
+  >
+    <mat-error class="form__error" *ngIf="errorMessage">{{
+      errorMessage
+    }}</mat-error>
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
       <input type="email" matInput formControlName="email" />

@@ -1,5 +1,6 @@
 <div class="layout">
-  <div class="products">
+  <div class="not-found" *ngIf="notFound">No result found</div>
+  <div *ngIf="!notFound" class="products">
     <app-product
       class="products__box"
       *ngFor="let product of products"
