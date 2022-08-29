@@ -5,6 +5,7 @@
     [(ngModel)]="inputSearch"
     (change)="onChangeInput()"
     placeholder="I'm looking for..."
+    (keyup.enter)="onSearch()"
   />
   <button class="search__button" (click)="onSearch()">Search</button>
 </div>
