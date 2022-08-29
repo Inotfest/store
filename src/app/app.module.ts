@@ -26,6 +26,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DialogNotificationComponent } from './components/dialog-notification/dialog-notification.component';
+import { TrimStringPipe } from './pipes/trim-string.pipe';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { DialogNotificationComponent } from './components/dialog-notification/di
     LoginComponent,
     RegisterComponent,
     DialogNotificationComponent,
+    TrimStringPipe,
   ],
   imports: [
     BrowserModule,

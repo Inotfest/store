@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "dima@gmail.com",
+      "password": "$2a$10$wCSLmdqS.50OWL43Z2trqO54..HgQsIFDifh1B0WJoU76OkPJQSXW",
+      "username": "dima",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -389,6 +396,21 @@
       "battery": 3700,
       "description": "Screen (1.9 \"Super AMOLED, 512x260) + (6.7\", Dynamic AMOLED 2X, 2640x1080) / Qualcomm Snapdragon 8 Gen 1 / dual main camera: 12 MP + 12 MP, front 10 MP / RAM 8 GB / 256 GB internal memory / 3G / LTE / 5G / GPS / Nano-SIM + eSIM / Android 12 / 3700 mAh",
       "id": 26
+    },
+    {
+      "name": "Infinix Note 11 (X663B) 6/128Gb NFC Celestial Snow",
+      "price": 230,
+      "brand": "infinix",
+      "color": "white",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/280969020.jpg",
+      "photo2": "https://content.rozetka.com.ua/goods/images/big/280969021.jpg",
+      "photo3": "https://content.rozetka.com.ua/goods/images/big/280969023.jpg",
+      "diagonal": 6.7,
+      "ram": 6,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.7\", AMOLED, 2460x1080) / MediaTek Helio G88 (2 x 2.0 GHz + 6 x 1.8 GHz) / triple main camera: 50 MP + 2 MP + AI, front camera: 16 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 512 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 27
     }
   ],
   "orders": []

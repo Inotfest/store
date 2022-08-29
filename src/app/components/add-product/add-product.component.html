@@ -112,7 +112,7 @@
             >Min value 4.1 - max value 10</mat-error
           >
         </mat-form-field>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Brand</mat-label>
           <mat-select formControlName="brand">
             <mat-option [value]="brand" *ngFor="let brand of brandList">{{
@@ -123,7 +123,7 @@
             >You must choose a brand</mat-error
           >
         </mat-form-field>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="example-full-width">
           <mat-label>Color</mat-label>
           <mat-select formControlName="color">
             <mat-option [value]="color" *ngFor="let color of colorList">{{
