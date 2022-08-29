@@ -4,6 +4,7 @@ import { Product } from 'src/app/interfaces/product';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { QuantityOfGoods } from 'src/app/constants/QuantityOfGoods';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-dialog',
@@ -15,16 +16,19 @@ export class DialogComponent implements OnInit {
   public isInBasket: boolean = false;
   public disabledMinus: boolean = true;
   public disabledPlus: boolean = false;
+  public isLogin: boolean = false;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Product,
     private dialogRef: MatDialogRef<DialogComponent>,
     private localStorageService: LocalStorageService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
     this.checkInBasket();
+    this.checkLogin();
   }
 
   public plusProduct(): void {
@@ -56,10 +60,6 @@ export class DialogComponent implements OnInit {
     this.close();
   }
 
-  public checkInBasket(): void {
-    this.isInBasket = this.localStorageService.checkProductInBasket(this.data);
-  }
-
   public goToBasket(): void {
     this.close();
     this.router.navigate(['basket']);
@@ -67,5 +67,13 @@ export class DialogComponent implements OnInit {
 
   public close(): void {
     this.dialogRef.close();
+  }
+
+  private checkInBasket(): void {
+    this.isInBasket = this.localStorageService.checkProductInBasket(this.data);
+  }
+
+  private checkLogin() {
+    this.isLogin = this.authService.isAuthenticated();
   }
 }
