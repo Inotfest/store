@@ -15,13 +15,16 @@
         <ng-container *ngIf="!user">
           <li class="nav__item"><a routerLink="/login">Login</a></li>
           <li class="nav__item"><a routerLink="/register">Signup</a></li>
-          <li
-            class="nav__item"
-            [matBadge]="numberOfOrders"
-            matBadgeOverlap="true"
-            matBadgeColor="warn"
-          >
-            <a class="nav__link" routerLink="/basket">Basket</a>
+          <li *ngIf="numberOfOrders" class="nav__item">
+            <a class="nav__link material-symbols-outlined nav__icon" routerLink="/basket"
+              ><span
+                [matBadge]="numberOfOrders"
+                matBadgeOverlap="true"
+                matBadgeColor="warn"
+              >
+                shopping_cart
+              </span></a
+            >
           </li>
         </ng-container>
       </ul>
