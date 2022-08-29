@@ -2,33 +2,9 @@
   "users": [
     {
       "email": "dima@gmail.com",
-      "password": "$2a$10$zwuo5OVOOB.R16/QAqC6IuFm4PuVYDl7qoaZN5EFYPVsvN.MgHRtK",
+      "password": "$2a$10$wCSLmdqS.50OWL43Z2trqO54..HgQsIFDifh1B0WJoU76OkPJQSXW",
       "username": "dima",
       "id": 1
-    },
-    {
-      "email": "asdA@gasd.re",
-      "password": "$2a$10$9ZZytvJx.aSjo3PQ2aJDm.cJXR8T0Or4lMDyUchLrcmk3C81IIkhG",
-      "username": "asdasdas",
-      "id": 2
-    },
-    {
-      "email": "dimasd@gmail.com",
-      "password": "$2a$10$xVQ8Xkp60Deg4sBZTLSyBO7z4SwdX67W4J9e8vELKa7gDPTzqfqMq",
-      "username": "asdasd",
-      "id": 3
-    },
-    {
-      "email": "sND@gmi.re",
-      "password": "$2a$10$1eLb7LwMMHCHpk7EMmwD9.QTELuzpgXDKJn8S33ghqgDGJWXmKfka",
-      "username": "asdsad",
-      "id": 4
-    },
-    {
-      "email": "asdsad@gmail.com",
-      "password": "$2a$10$VMkQsUvdI3MQ8ao0sTQgcuvGv4/ggVWSPXzmlkgablLd7qDAFefrK",
-      "username": "asasdasdasdasdasdasdasd",
-      "id": 5
     }
   ],
   "products": [
@@ -420,68 +396,22 @@
       "battery": 3700,
       "description": "Screen (1.9 \"Super AMOLED, 512x260) + (6.7\", Dynamic AMOLED 2X, 2640x1080) / Qualcomm Snapdragon 8 Gen 1 / dual main camera: 12 MP + 12 MP, front 10 MP / RAM 8 GB / 256 GB internal memory / 3G / LTE / 5G / GPS / Nano-SIM + eSIM / Android 12 / 3700 mAh",
       "id": 26
-    }
-  ],
-  "orders": [
-    {
-      "firstName": "sadasddasad",
-      "lastName": "asdasd",
-      "region": "asdasd",
-      "city": "asdasd",
-      "address": "asdadasdasd",
-      "phoneNumber": "222222222",
-      "email": "",
-      "products": [
-        {
-          "product": {
-            "id": 3,
-            "name": "Xiaomi Redmi Note 11 4/128GB Graphite Gray",
-            "price": 243,
-            "brand": "xiaomi",
-            "color": "gray",
-            "photo": "https://content.rozetka.com.ua/goods/images/big/250762458.jpg",
-            "photo2": "https://content.rozetka.com.ua/goods/images/big/277513823.jpg",
-            "photo3": "https://content1.rozetka.com.ua/goods/images/big/250762466.jpg",
-            "diagonal": 4.6,
-            "battery": 5000,
-            "ram": 6,
-            "memory": 128,
-            "description": "Screen (6.43\", AMOLED, 2400x1080) / Qualcomm Snapdragon 680 (2.4 GHz) / main quad camera: 50 MP + 8 MP + 2 MP + 2 MP, front 13 MP / 4 GB RAM / 128 GB internal memory + microSD ( up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh"
-          },
-          "numberOfproducts": 1
-        }
-      ],
-      "id": 1
     },
     {
-      "firstName": "asdadasd",
-      "lastName": "asdasdasd",
-      "region": "asdasd",
-      "city": "asdasd",
-      "address": "asdasd",
-      "phoneNumber": "222222222",
-      "email": "",
-      "products": [
-        {
-          "product": {
-            "id": 4,
-            "name": "Motorola Moto G60 6/128GB Haze Gray",
-            "price": 270,
-            "brand": "motorola",
-            "color": "gray",
-            "photo": "https://content2.rozetka.com.ua/goods/images/big/220713124.jpg",
-            "photo2": "https://content.rozetka.com.ua/goods/images/big/220713295.jpg",
-            "photo3": "https://content1.rozetka.com.ua/goods/images/big/265433290.jpg",
-            "diagonal": 4.2,
-            "battery": 6000,
-            "ram": 6,
-            "memory": 128,
-            "description": "Screen (6.8\", IPS, 2460x1080) / Qualcomm Snapdragon 732G (2 x 2.3 GHz + 6 x 1.8 GHz) / main triple camera: 108 MP + 8 MP + 2 MP, front camera: 32 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 6000 mAh"
-          },
-          "numberOfproducts": 1
-        }
-      ],
-      "id": 2
+      "name": "Infinix Note 11 (X663B) 6/128Gb NFC Celestial Snow",
+      "price": 230,
+      "brand": "infinix",
+      "color": "white",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/280969020.jpg",
+      "photo2": "https://content.rozetka.com.ua/goods/images/big/280969021.jpg",
+      "photo3": "https://content.rozetka.com.ua/goods/images/big/280969023.jpg",
+      "diagonal": 6.7,
+      "ram": 6,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.7\", AMOLED, 2460x1080) / MediaTek Helio G88 (2 x 2.0 GHz + 6 x 1.8 GHz) / triple main camera: 50 MP + 2 MP + AI, front camera: 16 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 512 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 27
     }
-  ]
+  ],
+  "orders": []
 }

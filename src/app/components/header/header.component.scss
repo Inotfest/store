@@ -2,14 +2,12 @@
   display: flex;
   flex-grow: 0;
   background-color: #232f3e;
-  padding: 1rem 0rem;
 
   &__box {
     display: flex;
     width: 100%;
     color: white;
     font-size: 1.8rem;
-    padding: 1rem 0rem;
     justify-content: space-between;
   }
 }
@@ -20,6 +18,7 @@
 
 .nav {
   align-self: center;
+  padding: 2rem 0rem;
 
   &__elements {
     display: flex;
@@ -27,11 +26,19 @@
 
   &__item {
     padding-left: 2rem;
+    align-self: center;
+    position: relative;
 
     &_user {
       padding-right: 2rem;
       font-size: 1.7rem;
       color: rgb(199, 198, 198);
     }
+  }
+
+  &__icon {
+    position: absolute;
+    font-size: 3rem;
+    top: -15px;
   }
 }

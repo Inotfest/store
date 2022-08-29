@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
         Validators.required,
         Validators.email,
         Validators.minLength(4),
-        Validators.maxLength(24),
+        Validators.maxLength(30),
       ]),
       password: new FormControl(null, [
         Validators.required,

@@ -7,23 +7,26 @@
       <ul class="nav__elements">
         <ng-container *ngIf="user">
           <li class="nav__item nav__item_user">Hi, {{ user | titlecase }}</li>
+          <li class="nav__item"><a routerLink="/add">Add product</a></li>
           <li class="nav__item">
             <a routerLink="" (click)="logout()">Logout</a>
           </li>
-          <li class="nav__item"><a routerLink="/add">Add product</a></li>
         </ng-container>
         <ng-container *ngIf="!user">
           <li class="nav__item"><a routerLink="/login">Login</a></li>
           <li class="nav__item"><a routerLink="/register">Signup</a></li>
+          <li *ngIf="numberOfOrders" class="nav__item">
+            <a class="nav__link material-symbols-outlined nav__icon" routerLink="/basket"
+              ><span
+                [matBadge]="numberOfOrders"
+                matBadgeOverlap="true"
+                matBadgeColor="warn"
+              >
+                shopping_cart
+              </span></a
+            >
+          </li>
         </ng-container>
-        <li
-          class="nav__item"
-          [matBadge]="numberOfOrders"
-          matBadgeOverlap="true"
-          matBadgeColor="warn"
-        >
-          <a class="nav__link" routerLink="/basket">Basket</a>
-        </li>
       </ul>
     </nav>
   </div>

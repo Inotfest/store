@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, tap, finalize } from 'rxjs';
+import { Subject, tap } from 'rxjs';
 import { TokenData } from '../constants/Token';
 import { TokenDate, TokenKey, User } from '../interfaces/user';
 

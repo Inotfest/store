@@ -23,12 +23,12 @@ export class RegisterComponent implements OnInit {
         Validators.required,
         Validators.email,
         Validators.minLength(4),
-        Validators.maxLength(24),
+        Validators.maxLength(30),
       ]),
       username: new FormControl(null, [
         Validators.required,
         Validators.minLength(4),
-        Validators.maxLength(24),
+        Validators.maxLength(20),
       ]),
       password: new FormControl(null, [
         Validators.required,

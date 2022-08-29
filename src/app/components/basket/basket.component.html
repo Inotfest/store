@@ -72,7 +72,7 @@
               form.controls.firstName.hasError('minlength') ||
               form.controls.firstName.hasError('maxlength')
             "
-            >Invalid character length</mat-error
+            >The field must be between 3 and 20 characters long</mat-error
           >
         </mat-form-field>
         <mat-form-field class="example-full-width">
@@ -86,7 +86,7 @@
               form.controls.lastName.hasError('minlength') ||
               form.controls.lastName.hasError('maxlength')
             "
-            >Invalid character length</mat-error
+            >The field must be between 3 and 30 characters long</mat-error
           >
         </mat-form-field>
         <mat-form-field class="example-full-width">
@@ -100,7 +100,7 @@
               form.controls.region.hasError('minlength') ||
               form.controls.region.hasError('maxlength')
             "
-            >Invalid character length</mat-error
+            >The field must be between 3 and 30 characters long</mat-error
           >
         </mat-form-field>
         <mat-form-field class="example-full-width">
@@ -114,7 +114,7 @@
               form.controls.city.hasError('minlength') ||
               form.controls.city.hasError('maxlength')
             "
-            >Invalid character length</mat-error
+            >The field must be between 3 and 30 characters long</mat-error
           >
         </mat-form-field>
         <mat-form-field class="example-full-width">
@@ -128,27 +128,37 @@
               form.controls.address.hasError('minlength') ||
               form.controls.address.hasError('maxlength')
             "
-            >Invalid character length</mat-error
+            >The field must be between 3 and 40 characters long</mat-error
           >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Telephone</mat-label>
           <span matPrefix>+38 &nbsp;</span>
-          <input type="tel" matInput formControlName="phoneNumber" />
+          <input
+            type="tel"
+            matInput
+            formControlName="phoneNumber"
+            placeholder="0501488228"
+          />
           <mat-error *ngIf="form.controls.phoneNumber.hasError('required')"
-            >You must enter your phone number</mat-error
+            >You must enter your phone number. For example 0501488228</mat-error
           >
           <mat-error
             *ngIf="
               form.controls.phoneNumber.hasError('minlength') ||
               form.controls.phoneNumber.hasError('maxlength')
             "
-            >Invalid character length</mat-error
+            >The field must be 9 long</mat-error
           >
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
-          <input type="email" matInput formControlName="email" />
+          <input
+            type="email"
+            matInput
+            formControlName="email"
+            placeholder="Ex. pat@example.com"
+          />
           <mat-error *ngIf="form.controls.email.hasError('email')"
             >Not a valid email</mat-error
           >
