@@ -39,9 +39,15 @@ export class AddProductComponent implements OnInit, OnDestroy {
       ]),
       brand: new FormControl('', [Validators.required]),
       color: new FormControl('', [Validators.required]),
-      photo: new FormControl('', [Validators.required]),
-      photo2: new FormControl('', [Validators.required]),
-      photo3: new FormControl(''),
+      photo: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(100),
+      ]),
+      photo2: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(100),
+      ]),
+      photo3: new FormControl('', [Validators.maxLength(100)]),
       diagonal: new FormControl('', [
         Validators.required,
         Validators.min(4.1),

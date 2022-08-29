@@ -34,27 +34,27 @@ export class BasketComponent implements OnInit, OnDestroy {
       firstName: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
-        Validators.maxLength(35),
+        Validators.maxLength(20),
       ]),
       lastName: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
-        Validators.maxLength(35),
+        Validators.maxLength(30),
       ]),
       region: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
-        Validators.maxLength(35),
+        Validators.maxLength(30),
       ]),
       city: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
-        Validators.maxLength(35),
+        Validators.maxLength(30),
       ]),
       address: new FormControl('', [
         Validators.required,
         Validators.minLength(5),
-        Validators.maxLength(35),
+        Validators.maxLength(40),
       ]),
       phoneNumber: new FormControl('', [
         Validators.required,

@@ -10,7 +10,12 @@
     }}</mat-error>
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
-      <input type="email" matInput formControlName="email" />
+      <input
+        type="email"
+        matInput
+        formControlName="email"
+        placeholder="Ex. pat@example.com"
+      />
       <mat-error *ngIf="form.controls.email.hasError('required')"
         >You must enter a value</mat-error
       >
@@ -22,7 +27,7 @@
           form.controls.email.hasError('minlength') ||
           form.controls.email.hasError('maxlength')
         "
-        >Invalid character length</mat-error
+        >The field must be between 4 and 30 characters long</mat-error
       >
     </mat-form-field>
     <mat-form-field class="example-full-width">
@@ -36,7 +41,7 @@
           form.controls.username.hasError('minlength') ||
           form.controls.username.hasError('maxlength')
         "
-        >Invalid character length</mat-error
+        >The field must be between 4 and 20 characters long</mat-error
       >
     </mat-form-field>
     <mat-form-field class="example-full-width">
@@ -50,7 +55,7 @@
           form.controls.password.hasError('minlength') ||
           form.controls.password.hasError('maxlength')
         "
-        >Invalid character length</mat-error
+        >The field must be between 4 and 16 characters long</mat-error
       >
     </mat-form-field>
     <div class="form__button">
