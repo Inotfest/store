@@ -42,3 +42,10 @@
     top: -15px;
   }
 }
+
+.hover {
+  &:hover {
+    transition: all 0.3s;
+    color: rgb(227, 73, 73);
+  }
+}
