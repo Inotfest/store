@@ -5,6 +5,12 @@
       "password": "$2a$10$wCSLmdqS.50OWL43Z2trqO54..HgQsIFDifh1B0WJoU76OkPJQSXW",
       "username": "dima",
       "id": 1
+    },
+    {
+      "email": "mary@gmail.com",
+      "password": "$2a$10$0zBpVZ6pI6J3R7OJkfXOe.6w/D8uxnEo43UgpYyDCYnFb9RiexnB6",
+      "username": "marina",
+      "id": 2
     }
   ],
   "products": [
@@ -411,6 +417,66 @@
       "battery": 5000,
       "description": "Screen (6.7\", AMOLED, 2460x1080) / MediaTek Helio G88 (2 x 2.0 GHz + 6 x 1.8 GHz) / triple main camera: 50 MP + 2 MP + AI, front camera: 16 MP / RAM 6 GB / 128 GB built-in memory + microSD (up to 512 GB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
       "id": 27
+    },
+    {
+      "name": "Xiaomi Redmi Note 10 Pro 6/128GB Onyx Gray",
+      "price": 300,
+      "brand": "xiaomi",
+      "color": "gray",
+      "photo": "https://content1.rozetka.com.ua/goods/images/big/163432102.jpg",
+      "photo2": "https://content.rozetka.com.ua/goods/images/big/163432103.jpg",
+      "photo3": "https://content1.rozetka.com.ua/goods/images/big/163432106.jpg",
+      "diagonal": 6.67,
+      "ram": 6,
+      "memory": 128,
+      "battery": 5020,
+      "description": "Screen (6.67\", AMOLED, 2400x1080) / Qualcomm Snapdragon 732G (2.3 GHz) / main quad camera: 108 MP + 8 MP + 5 MP + 2 MP, front 16 MP / RAM 6 GB / 128 GB internal memory / 3G / LTE / GPS / dual SIM support (Nano-SIM) / Android 11 (MIUI 12) / 5020 mAh",
+      "id": 28
+    },
+    {
+      "name": "Motorola G22 4/64GB Cosmic Black",
+      "price": 175,
+      "brand": "motorola",
+      "color": "black",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/278367703.jpg",
+      "photo2": "https://content.rozetka.com.ua/goods/images/big/278367733.jpg",
+      "photo3": "https://content.rozetka.com.ua/goods/images/big/278367720.jpg",
+      "diagonal": 6.5,
+      "ram": 4,
+      "memory": 64,
+      "battery": 5000,
+      "description": "Screen (6.5\", IPS, 1600x720) / MediaTek Helio G37 (2.3 GHz + 1.8 GHz) / main quad camera: 50 MP + 8 MP + 2 MP + 2 MP, front camera: 16 MP / RAM 4 GB / 64 GB built-in memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2 SIM-cards (Nano-SIM) / Android 12 / 5000 mAh",
+      "id": 29
+    },
+    {
+      "name": "Samsung Galaxy A03 3/32GB Blue",
+      "price": 135,
+      "brand": "samsung",
+      "color": "blue",
+      "photo": "https://content.rozetka.com.ua/goods/images/big/246788795.png",
+      "photo2": "https://content1.rozetka.com.ua/goods/images/big/246788792.png",
+      "photo3": "https://content1.rozetka.com.ua/goods/images/big/246788789.png",
+      "diagonal": 6.5,
+      "ram": 3,
+      "memory": 32,
+      "battery": 5000,
+      "description": "Screen (6.5\", PLS, 1600x720) / (1.6 GHz) / dual main camera: 48 MP + 2 MP, front 5 MP / RAM 3 GB / 32 GB internal memory + microSD (up to 1 TB) / 3G / LTE / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 30
+    },
+    {
+      "name": "Motorola G200 5G 8/128GB Stellar Blue",
+      "price": 488,
+      "brand": "motorola",
+      "color": "blue",
+      "photo": "https://content2.rozetka.com.ua/goods/images/big/243884320.jpg",
+      "photo2": "https://content2.rozetka.com.ua/goods/images/big/243884322.jpg",
+      "photo3": "https://content2.rozetka.com.ua/goods/images/big/243884333.jpg",
+      "diagonal": 6.8,
+      "ram": 8,
+      "memory": 128,
+      "battery": 5000,
+      "description": "Screen (6.8\", IPS, 2460x1080) / Qualcomm Snapdragon 888+ (3.0 GHz) / triple main camera: 108 MP + 13 MP + 2 MP, front 16 MP / RAM 8 GB / 128 GB internal memory / 3G / LTE / 5G / GPS / support for 2x SIM-cards (Nano-SIM) / Android 11 / 5000 mAh",
+      "id": 31
     }
   ],
   "orders": []

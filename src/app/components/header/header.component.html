@@ -1,22 +1,30 @@
 <header class="header">
   <div class="container header__box">
     <div class="logo">
-      <a class="logo__link" routerLink="">Store</a>
+      <a class="logo__link hover" routerLink="">Store</a>
     </div>
     <nav class="nav">
       <ul class="nav__elements">
         <ng-container *ngIf="user">
           <li class="nav__item nav__item_user">Hi, {{ user | titlecase }}</li>
-          <li class="nav__item"><a routerLink="/add">Add product</a></li>
           <li class="nav__item">
-            <a routerLink="" (click)="logout()">Logout</a>
+            <a class="hover" routerLink="/add">Add product</a>
+          </li>
+          <li class="nav__item">
+            <a class="hover" routerLink="" (click)="logout()">Logout</a>
           </li>
         </ng-container>
         <ng-container *ngIf="!user">
-          <li class="nav__item"><a routerLink="/login">Login</a></li>
-          <li class="nav__item"><a routerLink="/register">Signup</a></li>
+          <li class="nav__item">
+            <a class="hover" routerLink="/login">Login</a>
+          </li>
+          <li class="nav__item">
+            <a class="hover" routerLink="/register">Signup</a>
+          </li>
           <li *ngIf="numberOfOrders" class="nav__item">
-            <a class="nav__link material-symbols-outlined nav__icon" routerLink="/basket"
+            <a
+              class="nav__link material-symbols-outlined nav__icon hover"
+              routerLink="/basket"
               ><span
                 [matBadge]="numberOfOrders"
                 matBadgeOverlap="true"

@@ -133,15 +133,15 @@
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Telephone</mat-label>
-          <span matPrefix>+38 &nbsp;</span>
+          <span matPrefix>+380 &nbsp;</span>
           <input
             type="tel"
             matInput
             formControlName="phoneNumber"
-            placeholder="0501488228"
+            placeholder="501234567"
           />
           <mat-error *ngIf="form.controls.phoneNumber.hasError('required')"
-            >You must enter your phone number. For example 0501488228</mat-error
+            >You must enter your phone number. For example 501234567</mat-error
           >
           <mat-error
             *ngIf="
